@@ -1,0 +1,252 @@
+[{"stream_name":"stderr","time":4.983677755,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":4.983722375,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":5.7719304430000005,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.772003933,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.77200961,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.772013178,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.322800475,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.3228353330000004,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.322840248,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.322843778,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":30.830967252,"data":"[00:00] GPU: Tesla T4 | DEBUG=False | epochs=3\n"}
+,{"stream_name":"stdout","time":30.865118995,"data":"[00:00] reading /kaggle/input/notebooks/shashankdixithaina/humaid-01-eda-baseline/humaid.csv\n"}
+,{"stream_name":"stdout","time":32.416438498,"data":"[00:01] train=53531 dev=7793 test=15160 classes=10\n"}
+,{"stream_name":"stdout","time":32.716543562,"data":"[00:02] model 1/2\n"}
+,{"stream_name":"stdout","time":32.722996019,"data":"[00:02] ===== bert: bert-base-uncased =====\n"}
+,{"stream_name":"stderr","time":33.38612548,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":33.386149543,"data":"\n"}
+,{"stream_name":"stderr","time":33.386154401,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":45.971798239,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":45.971849041,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":45.971856017,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":45.971860627,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971865528,"data":"cls.seq_relationship.weight                | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971869707,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971873595,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971877755,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971882192,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971886535,"data":"cls.seq_relationship.bias                  | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971905349,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":45.971909633,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":45.97191346,"data":"\n"}
+,{"stream_name":"stderr","time":45.971917274,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":45.971920485,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":45.971924059,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":45.97192768,"data":"\n"}
+,{"stream_name":"stderr","time":45.971930506,"data":"[transformers] \u001b[1mBertForSequenceClassification LOAD REPORT\u001b[0m from: bert-base-uncased\n"}
+,{"stream_name":"stderr","time":45.971933636,"data":"Key                                        | Status     | \n"}
+,{"stream_name":"stderr","time":45.971937225,"data":"-------------------------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":45.971941079,"data":"cls.predictions.transform.LayerNorm.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971944916,"data":"cls.seq_relationship.weight                | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971948004,"data":"cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971951689,"data":"cls.predictions.bias                       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971955061,"data":"cls.predictions.transform.dense.bias       | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971958327,"data":"cls.predictions.transform.dense.weight     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971961784,"data":"cls.seq_relationship.bias                  | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":45.971965262,"data":"classifier.weight                          | MISSING    | \n"}
+,{"stream_name":"stderr","time":45.971968562,"data":"classifier.bias                            | MISSING    | \n"}
+,{"stream_name":"stderr","time":45.971971997,"data":"\n"}
+,{"stream_name":"stderr","time":45.971975109,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":45.971978756,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":45.971982885,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":71.075005284,"data":"[00:40] bert epoch 1/3 step 100/5019 loss 2.3246 | 7.0 it/s | ETA this model 11.7 min\n"}
+,{"stream_name":"stdout","time":84.39978987,"data":"[00:53] bert epoch 1/3 step 200/5019 loss 1.9760 | 7.2 it/s | ETA this model 11.1 min\n"}
+,{"stream_name":"stdout","time":97.979771756,"data":"[01:07] bert epoch 1/3 step 300/5019 loss 1.3764 | 7.3 it/s | ETA this model 10.8 min\n"}
+,{"stream_name":"stdout","time":111.926777808,"data":"[01:21] bert epoch 1/3 step 400/5019 loss 0.9359 | 7.3 it/s | ETA this model 10.6 min\n"}
+,{"stream_name":"stdout","time":126.312590966,"data":"[01:35] bert epoch 1/3 step 500/5019 loss 0.8258 | 7.2 it/s | ETA this model 10.5 min\n"}
+,{"stream_name":"stdout","time":140.840670698,"data":"[01:50] bert epoch 1/3 step 600/5019 loss 0.7794 | 7.1 it/s | ETA this model 10.3 min\n"}
+,{"stream_name":"stdout","time":155.20295833,"data":"[02:04] bert epoch 1/3 step 700/5019 loss 0.6790 | 7.1 it/s | ETA this model 10.1 min\n"}
+,{"stream_name":"stdout","time":169.276055881,"data":"[02:18] bert epoch 1/3 step 800/5019 loss 0.7433 | 7.1 it/s | ETA this model 9.9 min\n"}
+,{"stream_name":"stdout","time":183.133981158,"data":"[02:32] bert epoch 1/3 step 900/5019 loss 0.7233 | 7.1 it/s | ETA this model 9.6 min\n"}
+,{"stream_name":"stdout","time":197.30689509,"data":"[02:46] bert epoch 1/3 step 1000/5019 loss 0.7101 | 7.1 it/s | ETA this model 9.4 min\n"}
+,{"stream_name":"stdout","time":211.464403841,"data":"[03:00] bert epoch 1/3 step 1100/5019 loss 0.7063 | 7.1 it/s | ETA this model 9.2 min\n"}
+,{"stream_name":"stdout","time":225.675163262,"data":"[03:15] bert epoch 1/3 step 1200/5019 loss 0.6860 | 7.1 it/s | ETA this model 9.0 min\n"}
+,{"stream_name":"stdout","time":240.186448559,"data":"[03:29] bert epoch 1/3 step 1300/5019 loss 0.7146 | 7.1 it/s | ETA this model 8.7 min\n"}
+,{"stream_name":"stdout","time":254.529008895,"data":"[03:43] bert epoch 1/3 step 1400/5019 loss 0.6791 | 7.1 it/s | ETA this model 8.5 min\n"}
+,{"stream_name":"stdout","time":268.479506965,"data":"[03:57] bert epoch 1/3 step 1500/5019 loss 0.6701 | 7.1 it/s | ETA this model 8.3 min\n"}
+,{"stream_name":"stdout","time":282.729843504,"data":"[04:12] bert epoch 1/3 step 1600/5019 loss 0.6610 | 7.1 it/s | ETA this model 8.0 min\n"}
+,{"stream_name":"stdout","time":300.789215652,"data":"[04:30] bert epoch 1 DEV {'accuracy': 0.76, 'macro_f1': 0.7329, 'weighted_f1': 0.7508}\n"}
+,{"stream_name":"stdout","time":305.153788527,"data":"[04:34] bert epoch 2/3 step 1700/5019 loss 0.1520 | 6.8 it/s | ETA this model 8.1 min\n"}
+,{"stream_name":"stdout","time":319.258659381,"data":"[04:48] bert epoch 2/3 step 1800/5019 loss 0.5605 | 6.9 it/s | ETA this model 7.8 min\n"}
+,{"stream_name":"stdout","time":333.291628432,"data":"[05:02] bert epoch 2/3 step 1900/5019 loss 0.5789 | 6.9 it/s | ETA this model 7.6 min\n"}
+,{"stream_name":"stdout","time":347.378138028,"data":"[05:16] bert epoch 2/3 step 2000/5019 loss 0.5640 | 6.9 it/s | ETA this model 7.3 min\n"}
+,{"stream_name":"stdout","time":361.433310891,"data":"[05:30] bert epoch 2/3 step 2100/5019 loss 0.5726 | 6.9 it/s | ETA this model 7.1 min\n"}
+,{"stream_name":"stdout","time":375.376940605,"data":"[05:44] bert epoch 2/3 step 2200/5019 loss 0.5367 | 6.9 it/s | ETA this model 6.8 min\n"}
+,{"stream_name":"stdout","time":389.583275913,"data":"[05:58] bert epoch 2/3 step 2300/5019 loss 0.5470 | 6.9 it/s | ETA this model 6.6 min\n"}
+,{"stream_name":"stdout","time":403.851754478,"data":"[06:13] bert epoch 2/3 step 2400/5019 loss 0.5506 | 6.9 it/s | ETA this model 6.3 min\n"}
+,{"stream_name":"stdout","time":417.999609147,"data":"[06:27] bert epoch 2/3 step 2500/5019 loss 0.5335 | 6.9 it/s | ETA this model 6.1 min\n"}
+,{"stream_name":"stdout","time":432.102988954,"data":"[06:41] bert epoch 2/3 step 2600/5019 loss 0.5356 | 6.9 it/s | ETA this model 5.8 min\n"}
+,{"stream_name":"stdout","time":446.31625152,"data":"[06:55] bert epoch 2/3 step 2700/5019 loss 0.5408 | 6.9 it/s | ETA this model 5.6 min\n"}
+,{"stream_name":"stdout","time":460.290763939,"data":"[07:09] bert epoch 2/3 step 2800/5019 loss 0.5481 | 6.9 it/s | ETA this model 5.3 min\n"}
+,{"stream_name":"stdout","time":474.380240063,"data":"[07:23] bert epoch 2/3 step 2900/5019 loss 0.5338 | 6.9 it/s | ETA this model 5.1 min\n"}
+,{"stream_name":"stdout","time":488.473336956,"data":"[07:37] bert epoch 2/3 step 3000/5019 loss 0.5633 | 6.9 it/s | ETA this model 4.8 min\n"}
+,{"stream_name":"stdout","time":502.601718124,"data":"[07:51] bert epoch 2/3 step 3100/5019 loss 0.5588 | 7.0 it/s | ETA this model 4.6 min\n"}
+,{"stream_name":"stdout","time":516.676431696,"data":"[08:06] bert epoch 2/3 step 3200/5019 loss 0.5445 | 7.0 it/s | ETA this model 4.4 min\n"}
+,{"stream_name":"stdout","time":530.892917173,"data":"[08:20] bert epoch 2/3 step 3300/5019 loss 0.5814 | 7.0 it/s | ETA this model 4.1 min\n"}
+,{"stream_name":"stdout","time":545.268996637,"data":"[08:34] bert epoch 2 DEV {'accuracy': 0.772, 'macro_f1': 0.7523, 'weighted_f1': 0.7662}\n"}
+,{"stream_name":"stdout","time":553.244683344,"data":"[08:42] bert epoch 3/3 step 3400/5019 loss 0.2510 | 6.8 it/s | ETA this model 3.9 min\n"}
+,{"stream_name":"stdout","time":567.564243735,"data":"[08:56] bert epoch 3/3 step 3500/5019 loss 0.4275 | 6.9 it/s | ETA this model 3.7 min\n"}
+,{"stream_name":"stdout","time":581.659638263,"data":"[09:11] bert epoch 3/3 step 3600/5019 loss 0.4361 | 6.9 it/s | ETA this model 3.4 min\n"}
+,{"stream_name":"stdout","time":595.839312384,"data":"[09:25] bert epoch 3/3 step 3700/5019 loss 0.4294 | 6.9 it/s | ETA this model 3.2 min\n"}
+,{"stream_name":"stdout","time":609.907285648,"data":"[09:39] bert epoch 3/3 step 3800/5019 loss 0.4442 | 6.9 it/s | ETA this model 3.0 min\n"}
+,{"stream_name":"stdout","time":624.164002868,"data":"[09:53] bert epoch 3/3 step 3900/5019 loss 0.4291 | 6.9 it/s | ETA this model 2.7 min\n"}
+,{"stream_name":"stdout","time":638.25800701,"data":"[10:07] bert epoch 3/3 step 4000/5019 loss 0.4621 | 6.9 it/s | ETA this model 2.5 min\n"}
+,{"stream_name":"stdout","time":652.463565799,"data":"[10:21] bert epoch 3/3 step 4100/5019 loss 0.4333 | 6.9 it/s | ETA this model 2.2 min\n"}
+,{"stream_name":"stdout","time":666.497982408,"data":"[10:35] bert epoch 3/3 step 4200/5019 loss 0.4280 | 6.9 it/s | ETA this model 2.0 min\n"}
+,{"stream_name":"stdout","time":680.605348996,"data":"[10:49] bert epoch 3/3 step 4300/5019 loss 0.4398 | 6.9 it/s | ETA this model 1.7 min\n"}
+,{"stream_name":"stdout","time":694.942927618,"data":"[11:04] bert epoch 3/3 step 4400/5019 loss 0.4060 | 6.9 it/s | ETA this model 1.5 min\n"}
+,{"stream_name":"stdout","time":709.027623649,"data":"[11:18] bert epoch 3/3 step 4500/5019 loss 0.4532 | 6.9 it/s | ETA this model 1.3 min\n"}
+,{"stream_name":"stdout","time":722.865801207,"data":"[11:32] bert epoch 3/3 step 4600/5019 loss 0.4142 | 6.9 it/s | ETA this model 1.0 min\n"}
+,{"stream_name":"stdout","time":737.061508715,"data":"[11:46] bert epoch 3/3 step 4700/5019 loss 0.4176 | 6.9 it/s | ETA this model 0.8 min\n"}
+,{"stream_name":"stdout","time":751.39403228,"data":"[12:00] bert epoch 3/3 step 4800/5019 loss 0.4093 | 6.9 it/s | ETA this model 0.5 min\n"}
+,{"stream_name":"stdout","time":765.502247362,"data":"[12:14] bert epoch 3/3 step 4900/5019 loss 0.4486 | 6.9 it/s | ETA this model 0.3 min\n"}
+,{"stream_name":"stdout","time":779.716026786,"data":"[12:29] bert epoch 3/3 step 5000/5019 loss 0.4420 | 6.9 it/s | ETA this model 0.0 min\n"}
+,{"stream_name":"stdout","time":790.095641294,"data":"[12:39] bert epoch 3 DEV {'accuracy': 0.7743, 'macro_f1': 0.7566, 'weighted_f1': 0.7717}\n"}
+,{"stream_name":"stdout","time":804.91971171,"data":"[12:54] bert TEST {'accuracy': 0.7819, 'macro_f1': 0.7655, 'weighted_f1': 0.7791}\n"}
+,{"stream_name":"stdout","time":804.935478958,"data":"                                        precision    recall  f1-score   support\n"}
+,{"stream_name":"stdout","time":804.93550595,"data":"\n"}
+,{"stream_name":"stdout","time":804.935511494,"data":"                    caution_and_advice      0.681     0.757     0.717      1070\n"}
+,{"stream_name":"stdout","time":804.935517908,"data":"      displaced_people_and_evacuations      0.870     0.914     0.891       790\n"}
+,{"stream_name":"stdout","time":804.935525017,"data":"     infrastructure_and_utility_damage      0.790     0.851     0.820      1617\n"}
+,{"stream_name":"stdout","time":804.935528085,"data":"                injured_or_dead_people      0.916     0.936     0.926      1447\n"}
+,{"stream_name":"stdout","time":804.935556225,"data":"               missing_or_found_people      0.781     0.792     0.786        72\n"}
+,{"stream_name":"stdout","time":804.935561138,"data":"                      not_humanitarian      0.630     0.624     0.627      1245\n"}
+,{"stream_name":"stdout","time":804.935564587,"data":"            other_relevant_information      0.625     0.510     0.562      2407\n"}
+,{"stream_name":"stdout","time":804.93556828,"data":"              requests_or_urgent_needs      0.553     0.702     0.619       521\n"}
+,{"stream_name":"stdout","time":804.935572332,"data":"rescue_volunteering_or_donation_effort      0.867     0.880     0.874      4219\n"}
+,{"stream_name":"stdout","time":804.935576309,"data":"                  sympathy_and_support      0.849     0.819     0.834      1772\n"}
+,{"stream_name":"stdout","time":804.935580557,"data":"\n"}
+,{"stream_name":"stdout","time":804.935583674,"data":"                              accuracy                          0.782     15160\n"}
+,{"stream_name":"stdout","time":804.935587122,"data":"                             macro avg      0.756     0.779     0.765     15160\n"}
+,{"stream_name":"stdout","time":804.935591141,"data":"                          weighted avg      0.779     0.782     0.779     15160\n"}
+,{"stream_name":"stdout","time":804.935595262,"data":"\n"}
+,{"stream_name":"stdout","time":806.270889537,"data":"[12:55] model 2/2\n"}
+,{"stream_name":"stdout","time":806.27365232,"data":"[12:55] ===== twitter_roberta: cardiffnlp/twitter-roberta-base =====\n"}
+,{"stream_name":"stderr","time":814.178995721,"data":"[transformers] \u001b[1mRobertaForSequenceClassification LOAD REPORT\u001b[0m from: cardiffnlp/twitter-roberta-base\n"}
+,{"stream_name":"stderr","time":814.179062352,"data":"Key                         | Status     | \n"}
+,{"stream_name":"stderr","time":814.179070531,"data":"----------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":814.179076288,"data":"roberta.pooler.dense.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179082088,"data":"lm_head.decoder.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179086973,"data":"lm_head.dense.weight        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179091319,"data":"lm_head.dense.bias          | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179095841,"data":"lm_head.layer_norm.bias     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.17910003,"data":"lm_head.layer_norm.weight   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179105248,"data":"lm_head.decoder.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179110844,"data":"lm_head.bias                | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179116229,"data":"roberta.pooler.dense.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179120878,"data":"classifier.out_proj.weight  | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.17912626,"data":"classifier.dense.weight     | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.179132301,"data":"classifier.out_proj.bias    | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.179137035,"data":"classifier.dense.bias       | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.179141948,"data":"\n"}
+,{"stream_name":"stderr","time":814.179146743,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":814.179151343,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":814.179156823,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stderr","time":814.179175452,"data":"\n"}
+,{"stream_name":"stderr","time":814.17917952,"data":"[transformers] \u001b[1mRobertaForSequenceClassification LOAD REPORT\u001b[0m from: cardiffnlp/twitter-roberta-base\n"}
+,{"stream_name":"stderr","time":814.179184022,"data":"Key                         | Status     | \n"}
+,{"stream_name":"stderr","time":814.179188069,"data":"----------------------------+------------+-\n"}
+,{"stream_name":"stderr","time":814.179192139,"data":"roberta.pooler.dense.bias   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179196171,"data":"lm_head.decoder.weight      | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179200275,"data":"lm_head.dense.weight        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179204761,"data":"lm_head.dense.bias          | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179208915,"data":"lm_head.layer_norm.bias     | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179213154,"data":"lm_head.layer_norm.weight   | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179224079,"data":"lm_head.decoder.bias        | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179228218,"data":"lm_head.bias                | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179232309,"data":"roberta.pooler.dense.weight | UNEXPECTED | \n"}
+,{"stream_name":"stderr","time":814.179236411,"data":"classifier.out_proj.weight  | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.179240224,"data":"classifier.dense.weight     | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.179244359,"data":"classifier.out_proj.bias    | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.179248492,"data":"classifier.dense.bias       | MISSING    | \n"}
+,{"stream_name":"stderr","time":814.17925267,"data":"\n"}
+,{"stream_name":"stderr","time":814.179256527,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":814.179260489,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":814.17926515,"data":"- MISSING:\tthose params were newly initialized because missing from the checkpoint. Consider training on your downstream task.\n"}
+,{"stream_name":"stdout","time":839.523678549,"data":"[13:28] twitter_roberta epoch 1/3 step 100/5019 loss 2.2909 | 6.4 it/s | ETA this model 12.9 min\n"}
+,{"stream_name":"stdout","time":855.477065373,"data":"[13:44] twitter_roberta epoch 1/3 step 200/5019 loss 1.6525 | 6.3 it/s | ETA this model 12.7 min\n"}
+,{"stream_name":"stdout","time":871.40533164,"data":"[14:00] twitter_roberta epoch 1/3 step 300/5019 loss 0.9392 | 6.3 it/s | ETA this model 12.5 min\n"}
+,{"stream_name":"stdout","time":886.79675137,"data":"[14:16] twitter_roberta epoch 1/3 step 400/5019 loss 0.8356 | 6.4 it/s | ETA this model 12.1 min\n"}
+,{"stream_name":"stdout","time":902.234111599,"data":"[14:31] twitter_roberta epoch 1/3 step 500/5019 loss 0.7886 | 6.4 it/s | ETA this model 11.8 min\n"}
+,{"stream_name":"stdout","time":917.419633444,"data":"[14:46] twitter_roberta epoch 1/3 step 600/5019 loss 0.7480 | 6.4 it/s | ETA this model 11.5 min\n"}
+,{"stream_name":"stdout","time":932.994237555,"data":"[15:02] twitter_roberta epoch 1/3 step 700/5019 loss 0.6912 | 6.4 it/s | ETA this model 11.2 min\n"}
+,{"stream_name":"stdout","time":948.755244889,"data":"[15:18] twitter_roberta epoch 1/3 step 800/5019 loss 0.7157 | 6.4 it/s | ETA this model 11.0 min\n"}
+,{"stream_name":"stdout","time":964.294050818,"data":"[15:33] twitter_roberta epoch 1/3 step 900/5019 loss 0.6819 | 6.4 it/s | ETA this model 10.7 min\n"}
+,{"stream_name":"stdout","time":979.926184699,"data":"[15:49] twitter_roberta epoch 1/3 step 1000/5019 loss 0.7223 | 6.4 it/s | ETA this model 10.5 min\n"}
+,{"stream_name":"stdout","time":995.206194063,"data":"[16:04] twitter_roberta epoch 1/3 step 1100/5019 loss 0.6631 | 6.4 it/s | ETA this model 10.2 min\n"}
+,{"stream_name":"stdout","time":1010.518674018,"data":"[16:19] twitter_roberta epoch 1/3 step 1200/5019 loss 0.6742 | 6.4 it/s | ETA this model 9.9 min\n"}
+,{"stream_name":"stdout","time":1025.981343323,"data":"[16:35] twitter_roberta epoch 1/3 step 1300/5019 loss 0.6470 | 6.4 it/s | ETA this model 9.6 min\n"}
+,{"stream_name":"stdout","time":1041.520135932,"data":"[16:50] twitter_roberta epoch 1/3 step 1400/5019 loss 0.6510 | 6.4 it/s | ETA this model 9.4 min\n"}
+,{"stream_name":"stdout","time":1057.251502065,"data":"[17:06] twitter_roberta epoch 1/3 step 1500/5019 loss 0.6360 | 6.4 it/s | ETA this model 9.1 min\n"}
+,{"stream_name":"stdout","time":1072.76850478,"data":"[17:22] twitter_roberta epoch 1/3 step 1600/5019 loss 0.6905 | 6.4 it/s | ETA this model 8.9 min\n"}
+,{"stream_name":"stdout","time":1092.432312345,"data":"[17:41] twitter_roberta epoch 1 DEV {'accuracy': 0.7699, 'macro_f1': 0.7501, 'weighted_f1': 0.7673}\n"}
+,{"stream_name":"stdout","time":1097.068186487,"data":"[17:46] twitter_roberta epoch 2/3 step 1700/5019 loss 0.1597 | 6.2 it/s | ETA this model 8.9 min\n"}
+,{"stream_name":"stdout","time":1112.437088052,"data":"[18:01] twitter_roberta epoch 2/3 step 1800/5019 loss 0.5726 | 6.2 it/s | ETA this model 8.6 min\n"}
+,{"stream_name":"stdout","time":1128.27574737,"data":"[18:17] twitter_roberta epoch 2/3 step 1900/5019 loss 0.5852 | 6.2 it/s | ETA this model 8.3 min\n"}
+,{"stream_name":"stdout","time":1144.096585418,"data":"[18:33] twitter_roberta epoch 2/3 step 2000/5019 loss 0.5823 | 6.2 it/s | ETA this model 8.1 min\n"}
+,{"stream_name":"stdout","time":1159.675439523,"data":"[18:49] twitter_roberta epoch 2/3 step 2100/5019 loss 0.5665 | 6.3 it/s | ETA this model 7.8 min\n"}
+,{"stream_name":"stdout","time":1175.128951351,"data":"[19:04] twitter_roberta epoch 2/3 step 2200/5019 loss 0.5517 | 6.3 it/s | ETA this model 7.5 min\n"}
+,{"stream_name":"stdout","time":1190.779888864,"data":"[19:20] twitter_roberta epoch 2/3 step 2300/5019 loss 0.5409 | 6.3 it/s | ETA this model 7.2 min\n"}
+,{"stream_name":"stdout","time":1206.211414582,"data":"[19:35] twitter_roberta epoch 2/3 step 2400/5019 loss 0.5340 | 6.3 it/s | ETA this model 7.0 min\n"}
+,{"stream_name":"stdout","time":1221.567608955,"data":"[19:50] twitter_roberta epoch 2/3 step 2500/5019 loss 0.5654 | 6.3 it/s | ETA this model 6.7 min\n"}
+,{"stream_name":"stdout","time":1237.080975286,"data":"[20:06] twitter_roberta epoch 2/3 step 2600/5019 loss 0.5581 | 6.3 it/s | ETA this model 6.4 min\n"}
+,{"stream_name":"stdout","time":1252.430438879,"data":"[20:21] twitter_roberta epoch 2/3 step 2700/5019 loss 0.5701 | 6.3 it/s | ETA this model 6.1 min\n"}
+,{"stream_name":"stdout","time":1267.9329039,"data":"[20:37] twitter_roberta epoch 2/3 step 2800/5019 loss 0.5371 | 6.3 it/s | ETA this model 5.9 min\n"}
+,{"stream_name":"stdout","time":1283.342637943,"data":"[20:52] twitter_roberta epoch 2/3 step 2900/5019 loss 0.5433 | 6.3 it/s | ETA this model 5.6 min\n"}
+,{"stream_name":"stdout","time":1298.614706298,"data":"[21:07] twitter_roberta epoch 2/3 step 3000/5019 loss 0.5386 | 6.3 it/s | ETA this model 5.3 min\n"}
+,{"stream_name":"stdout","time":1314.175237268,"data":"[21:23] twitter_roberta epoch 2/3 step 3100/5019 loss 0.5448 | 6.3 it/s | ETA this model 5.1 min\n"}
+,{"stream_name":"stdout","time":1329.526833504,"data":"[21:38] twitter_roberta epoch 2/3 step 3200/5019 loss 0.5042 | 6.3 it/s | ETA this model 4.8 min\n"}
+,{"stream_name":"stdout","time":1345.127765181,"data":"[21:54] twitter_roberta epoch 2/3 step 3300/5019 loss 0.5643 | 6.3 it/s | ETA this model 4.5 min\n"}
+,{"stream_name":"stdout","time":1360.481350757,"data":"[22:09] twitter_roberta epoch 2 DEV {'accuracy': 0.7721, 'macro_f1': 0.7564, 'weighted_f1': 0.7673}\n"}
+,{"stream_name":"stdout","time":1369.376102886,"data":"[22:18] twitter_roberta epoch 3/3 step 3400/5019 loss 0.2399 | 6.2 it/s | ETA this model 4.3 min\n"}
+,{"stream_name":"stdout","time":1384.853599173,"data":"[22:34] twitter_roberta epoch 3/3 step 3500/5019 loss 0.4475 | 6.2 it/s | ETA this model 4.1 min\n"}
+,{"stream_name":"stdout","time":1400.532515943,"data":"[22:49] twitter_roberta epoch 3/3 step 3600/5019 loss 0.4626 | 6.2 it/s | ETA this model 3.8 min\n"}
+,{"stream_name":"stdout","time":1416.144621729,"data":"[23:05] twitter_roberta epoch 3/3 step 3700/5019 loss 0.4377 | 6.2 it/s | ETA this model 3.5 min\n"}
+,{"stream_name":"stdout","time":1431.876596083,"data":"[23:21] twitter_roberta epoch 3/3 step 3800/5019 loss 0.4694 | 6.2 it/s | ETA this model 3.3 min\n"}
+,{"stream_name":"stdout","time":1447.306779572,"data":"[23:36] twitter_roberta epoch 3/3 step 3900/5019 loss 0.4575 | 6.3 it/s | ETA this model 3.0 min\n"}
+,{"stream_name":"stdout","time":1462.974149702,"data":"[23:52] twitter_roberta epoch 3/3 step 4000/5019 loss 0.4431 | 6.3 it/s | ETA this model 2.7 min\n"}
+,{"stream_name":"stdout","time":1478.386842596,"data":"[24:07] twitter_roberta epoch 3/3 step 4100/5019 loss 0.4624 | 6.3 it/s | ETA this model 2.4 min\n"}
+,{"stream_name":"stdout","time":1493.980933293,"data":"[24:23] twitter_roberta epoch 3/3 step 4200/5019 loss 0.4325 | 6.3 it/s | ETA this model 2.2 min\n"}
+,{"stream_name":"stdout","time":1509.665171182,"data":"[24:39] twitter_roberta epoch 3/3 step 4300/5019 loss 0.4273 | 6.3 it/s | ETA this model 1.9 min\n"}
+,{"stream_name":"stdout","time":1525.344991991,"data":"[24:54] twitter_roberta epoch 3/3 step 4400/5019 loss 0.4504 | 6.3 it/s | ETA this model 1.6 min\n"}
+,{"stream_name":"stdout","time":1541.00075222,"data":"[25:10] twitter_roberta epoch 3/3 step 4500/5019 loss 0.4667 | 6.3 it/s | ETA this model 1.4 min\n"}
+,{"stream_name":"stdout","time":1556.639169464,"data":"[25:26] twitter_roberta epoch 3/3 step 4600/5019 loss 0.4712 | 6.3 it/s | ETA this model 1.1 min\n"}
+,{"stream_name":"stdout","time":1572.185453329,"data":"[25:41] twitter_roberta epoch 3/3 step 4700/5019 loss 0.4616 | 6.3 it/s | ETA this model 0.8 min\n"}
+,{"stream_name":"stdout","time":1587.7061255,"data":"[25:57] twitter_roberta epoch 3/3 step 4800/5019 loss 0.4264 | 6.3 it/s | ETA this model 0.6 min\n"}
+,{"stream_name":"stdout","time":1603.139863784,"data":"[26:12] twitter_roberta epoch 3/3 step 4900/5019 loss 0.4487 | 6.3 it/s | ETA this model 0.3 min\n"}
+,{"stream_name":"stdout","time":1618.562092732,"data":"[26:27] twitter_roberta epoch 3/3 step 5000/5019 loss 0.4618 | 6.3 it/s | ETA this model 0.1 min\n"}
+,{"stream_name":"stdout","time":1629.692044459,"data":"[26:39] twitter_roberta epoch 3 DEV {'accuracy': 0.7731, 'macro_f1': 0.7538, 'weighted_f1': 0.7692}\n"}
+,{"stream_name":"stdout","time":1645.059199993,"data":"[26:54] twitter_roberta TEST {'accuracy': 0.7759, 'macro_f1': 0.7607, 'weighted_f1': 0.7712}\n"}
+,{"stream_name":"stdout","time":1645.072524547,"data":"                                        precision    recall  f1-score   support\n"}
+,{"stream_name":"stdout","time":1645.072547115,"data":"\n"}
+,{"stream_name":"stdout","time":1645.072552075,"data":"                    caution_and_advice      0.651     0.776     0.708      1070\n"}
+,{"stream_name":"stdout","time":1645.072556591,"data":"      displaced_people_and_evacuations      0.829     0.946     0.884       790\n"}
+,{"stream_name":"stdout","time":1645.072562734,"data":"     infrastructure_and_utility_damage      0.784     0.863     0.822      1617\n"}
+,{"stream_name":"stdout","time":1645.072567367,"data":"                injured_or_dead_people      0.893     0.959     0.925      1447\n"}
+,{"stream_name":"stdout","time":1645.072585859,"data":"               missing_or_found_people      0.750     0.833     0.789        72\n"}
+,{"stream_name":"stdout","time":1645.072590449,"data":"                      not_humanitarian      0.594     0.688     0.637      1245\n"}
+,{"stream_name":"stdout","time":1645.072593715,"data":"            other_relevant_information      0.631     0.445     0.522      2407\n"}
+,{"stream_name":"stdout","time":1645.072597373,"data":"              requests_or_urgent_needs      0.562     0.679     0.615       521\n"}
+,{"stream_name":"stdout","time":1645.072600961,"data":"rescue_volunteering_or_donation_effort      0.886     0.848     0.867      4219\n"}
+,{"stream_name":"stdout","time":1645.072604969,"data":"                  sympathy_and_support      0.839     0.838     0.839      1772\n"}
+,{"stream_name":"stdout","time":1645.072609144,"data":"\n"}
+,{"stream_name":"stdout","time":1645.072612921,"data":"                              accuracy                          0.776     15160\n"}
+,{"stream_name":"stdout","time":1645.072616669,"data":"                             macro avg      0.742     0.787     0.761     15160\n"}
+,{"stream_name":"stdout","time":1645.072620102,"data":"                          weighted avg      0.775     0.776     0.771     15160\n"}
+,{"stream_name":"stdout","time":1645.072623965,"data":"\n"}
+,{"stream_name":"stdout","time":1646.269972964,"data":"                 accuracy  macro_f1  weighted_f1\n"}
+,{"stream_name":"stdout","time":1646.270019823,"data":"bert               0.7819    0.7655       0.7791\n"}
+,{"stream_name":"stdout","time":1646.270025289,"data":"twitter_roberta    0.7759    0.7607       0.7712\n"}
+,{"stream_name":"stdout","time":1646.273961881,"data":"[26:55] done\n"}
+,{"stream_name":"stderr","time":1651.540405189,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1651.540454929,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1651.687055117,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1651.687083594,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1652.446724046,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1652.559797109,"data":"[NbConvertApp] Writing 545927 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1654.95342079,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1655.504920448,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":1655.504984555,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1655.505275125,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1655.505567891,"data":"[NbConvertApp] Writing 493719 bytes to __results__.html\n"}
+]

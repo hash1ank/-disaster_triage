@@ -1,0 +1,11 @@
+text,reality,bert,twitter_roberta
+"Bridge collapsed after the flood, vehicles stranded on both sides",real,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+"Bridge closed for repair work till Monday, please use the alternate route",routine,other_relevant_information,caution_and_advice
+"Road blocked due to landslide, several houses damaged",real,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+Road blocked due to metro construction work near the station,routine,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+Power lines down across the town after the cyclone,real,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+Scheduled power cut tomorrow for maintenance of power lines,routine,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+"Building collapsed in the earthquake, people trapped inside",real,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+Old building being demolished today to make way for a new mall,routine,infrastructure_and_utility_damage,infrastructure_and_utility_damage
+My exam today was a complete disaster,figurative,not_humanitarian,not_humanitarian
+"That concert was fire, the crowd was flooding in",figurative,not_humanitarian,not_humanitarian

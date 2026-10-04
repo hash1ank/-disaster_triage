@@ -73,12 +73,36 @@ ones, only 2 were labelled not humanitarian. "Road blocked due to metro construc
 work" was labelled infrastructure damage. Full table in
 `outputs/kaggle_01/baseline_confounder_probe.csv`.
 
+### Transformer baselines (notebook 02)
+
+Fine-tuned on the official split: 3 epochs, batch 32, lr 2e-5, max length 96, mixed
+precision, square-root-dampened class weights, best epoch chosen on dev macro-F1.
+One seed so far. About 13 minutes per model on a T4.
+
+| Model | Test accuracy | Test macro-F1 | Test weighted-F1 |
+|---|---|---|---|
+| TF-IDF + Logistic Regression | 0.746 | 0.730 | 0.748 |
+| BERT-base | 0.782 | 0.766 | 0.779 |
+| Twitter-RoBERTa-base | 0.776 | 0.761 | 0.771 |
+
+Both transformers are still weakest on other relevant information (F1 0.52–0.56),
+requests or urgent needs (0.62) and not humanitarian (0.63).
+
+Confounder probe: both get the 4 real sentences and the 2 figurative ones right, but
+neither labels any of the 4 routine construction or maintenance sentences as not
+humanitarian. "Road blocked due to metro construction work", "Scheduled power cut for
+maintenance" and "Old building being demolished" are all labelled infrastructure damage
+by both models. Full table in `outputs/kaggle_02/transformer_confounder_probe.csv`.
+
+Not yet run for the transformers: cross-disaster (leave-one-type-out) evaluation.
+
 ## 4. Roadmap
 
 - [x] Project setup, Kaggle link, data download
 - [x] EDA
 - [x] Baseline 1: TF-IDF + Logistic Regression, in-distribution and cross-disaster
-- [ ] Baselines 2 and 3: BERT-base and Twitter-RoBERTa fine-tuning (GPU)
+- [x] Baselines 2 and 3: BERT-base and Twitter-RoBERTa fine-tuning (GPU), official split
+- [ ] Cross-disaster evaluation for the transformer baselines
 - [ ] Confounder set: write and hand-verify the minimal pairs (start early, it is manual work)
 - [ ] Our model: ModernBERT/DeBERTa-v3 + LoRA
 - [ ] Add the two heads and the supervised contrastive loss
@@ -96,12 +120,13 @@ Class imbalance is handled with a class-weighted (or focal) loss, not oversampli
 ```
 notebooks/
   01_eda_baseline.py        source for each run, written as "# %%" cells
-  kaggle_01/                what gets pushed: kernel-metadata.json + generated .ipynb
+  02_transformer_baselines.py
+  kaggle_01/, kaggle_02/    what gets pushed: kernel-metadata.json + generated .ipynb
 src/
   make_notebook.py          converts a "# %%" .py file into a .ipynb
   kaggle_run.py             push → stream live logs → download outputs
 confounder_set/             the hand-verified minimal pairs (to be written)
-outputs/kaggle_01/          metrics, plots and log pulled back from Kaggle
+outputs/kaggle_0*/          metrics, plots and logs pulled back from Kaggle
 data/                       local dataset copy (git-ignored)
 ```
 

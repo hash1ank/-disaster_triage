@@ -1,0 +1,15 @@
+{
+  "id": "shashankdixithaina/humaid-02-transformer-baselines",
+  "title": "HumAID 02 Transformer Baselines",
+  "code_file": "humaid-02-transformer-baselines.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": ["shashankdixithaina/humaid-01-eda-baseline"],
+  "model_sources": []
+}

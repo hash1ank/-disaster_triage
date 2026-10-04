@@ -1,0 +1,60 @@
+{
+  "bert": {
+    "checkpoint": "bert-base-uncased",
+    "dev_history": [
+      {
+        "epoch": 1,
+        "accuracy": 0.76,
+        "macro_f1": 0.7329,
+        "weighted_f1": 0.7508
+      },
+      {
+        "epoch": 2,
+        "accuracy": 0.772,
+        "macro_f1": 0.7523,
+        "weighted_f1": 0.7662
+      },
+      {
+        "epoch": 3,
+        "accuracy": 0.7743,
+        "macro_f1": 0.7566,
+        "weighted_f1": 0.7717
+      }
+    ],
+    "test": {
+      "accuracy": 0.7819,
+      "macro_f1": 0.7655,
+      "weighted_f1": 0.7791
+    },
+    "train_minutes": 12.5
+  },
+  "twitter_roberta": {
+    "checkpoint": "cardiffnlp/twitter-roberta-base",
+    "dev_history": [
+      {
+        "epoch": 1,
+        "accuracy": 0.7699,
+        "macro_f1": 0.7501,
+        "weighted_f1": 0.7673
+      },
+      {
+        "epoch": 2,
+        "accuracy": 0.7721,
+        "macro_f1": 0.7564,
+        "weighted_f1": 0.7673
+      },
+      {
+        "epoch": 3,
+        "accuracy": 0.7731,
+        "macro_f1": 0.7538,
+        "weighted_f1": 0.7692
+      }
+    ],
+    "test": {
+      "accuracy": 0.7759,
+      "macro_f1": 0.7607,
+      "weighted_f1": 0.7712
+    },
+    "train_minutes": 13.7
+  }
+}
