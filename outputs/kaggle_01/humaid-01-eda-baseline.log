@@ -1,0 +1,156 @@
+[{"stream_name":"stderr","time":8.10101813,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":8.101075905,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":9.345921565,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.345951817,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.345956174,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.34595981,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.173694213,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.173732973,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.173739071,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.173744351,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":35.031049963,"data":"(76484, 6)\n"}
+,{"stream_name":"stdout","time":35.110775258,"data":"Tweets per split:\n"}
+,{"stream_name":"stdout","time":35.110813906,"data":" split\n"}
+,{"stream_name":"stdout","time":35.110819669,"data":"train    53531\n"}
+,{"stream_name":"stdout","time":35.110824319,"data":"test     15160\n"}
+,{"stream_name":"stdout","time":35.110828642,"data":"dev       7793\n"}
+,{"stream_name":"stdout","time":35.110832785,"data":"Name: count, dtype: int64 \n"}
+,{"stream_name":"stdout","time":35.110837123,"data":"\n"}
+,{"stream_name":"stdout","time":35.110841402,"data":"Number of classes: 10\n"}
+,{"stream_name":"stdout","time":35.110845869,"data":"label\n"}
+,{"stream_name":"stdout","time":35.110850104,"data":"rescue_volunteering_or_donation_effort    21278\n"}
+,{"stream_name":"stdout","time":35.110854948,"data":"other_relevant_information                12144\n"}
+,{"stream_name":"stdout","time":35.110859955,"data":"sympathy_and_support                       8931\n"}
+,{"stream_name":"stdout","time":35.110864679,"data":"infrastructure_and_utility_damage          8163\n"}
+,{"stream_name":"stdout","time":35.110869211,"data":"injured_or_dead_people                     7303\n"}
+,{"stream_name":"stdout","time":35.110873997,"data":"not_humanitarian                           6296\n"}
+,{"stream_name":"stdout","time":35.110878496,"data":"caution_and_advice                         5394\n"}
+,{"stream_name":"stdout","time":35.110882963,"data":"displaced_people_and_evacuations           3999\n"}
+,{"stream_name":"stdout","time":35.110887763,"data":"requests_or_urgent_needs                   2618\n"}
+,{"stream_name":"stdout","time":35.110892331,"data":"missing_or_found_people                     358\n"}
+,{"stream_name":"stdout","time":35.110896699,"data":"Name: count, dtype: int64 \n"}
+,{"stream_name":"stdout","time":35.11090096,"data":"\n"}
+,{"stream_name":"stdout","time":35.110905501,"data":"Imbalance ratio (largest / smallest class): 59.4\n"}
+,{"stream_name":"stdout","time":35.110910563,"data":"Duplicate tweet texts: 6\n"}
+,{"stream_name":"stdout","time":36.914452015,"data":"count    76484.000000\n"}
+,{"stream_name":"stdout","time":36.914492923,"data":"mean        22.104649\n"}
+,{"stream_name":"stdout","time":36.914499744,"data":"std         10.708463\n"}
+,{"stream_name":"stdout","time":36.914504442,"data":"min          3.000000\n"}
+,{"stream_name":"stdout","time":36.914508996,"data":"25%         14.000000\n"}
+,{"stream_name":"stdout","time":36.914513791,"data":"50%         19.000000\n"}
+,{"stream_name":"stdout","time":36.914518248,"data":"75%         28.000000\n"}
+,{"stream_name":"stdout","time":36.914522782,"data":"max         99.000000\n"}
+,{"stream_name":"stdout","time":36.914527584,"data":"Name: n_words, dtype: float64\n"}
+,{"stream_name":"stdout","time":241.740324888,"data":"{\n"}
+,{"stream_name":"stdout","time":241.740498146,"data":"  \"in_distribution\": {\n"}
+,{"stream_name":"stdout","time":241.740505956,"data":"    \"dev\": {\n"}
+,{"stream_name":"stdout","time":241.740511559,"data":"      \"accuracy\": 0.7428,\n"}
+,{"stream_name":"stdout","time":241.740517511,"data":"      \"macro_f1\": 0.7215,\n"}
+,{"stream_name":"stdout","time":241.740522733,"data":"      \"weighted_f1\": 0.7443\n"}
+,{"stream_name":"stdout","time":241.740526803,"data":"    },\n"}
+,{"stream_name":"stdout","time":241.74053045,"data":"    \"test\": {\n"}
+,{"stream_name":"stdout","time":241.740535173,"data":"      \"accuracy\": 0.7462,\n"}
+,{"stream_name":"stdout","time":241.740541004,"data":"      \"macro_f1\": 0.7298,\n"}
+,{"stream_name":"stdout","time":241.740546691,"data":"      \"weighted_f1\": 0.7475\n"}
+,{"stream_name":"stdout","time":241.740552099,"data":"    }\n"}
+,{"stream_name":"stdout","time":241.740557317,"data":"  }\n"}
+,{"stream_name":"stdout","time":241.740562454,"data":"}\n"}
+,{"stream_name":"stdout","time":241.740568034,"data":"                                        precision    recall  f1-score   support\n"}
+,{"stream_name":"stdout","time":241.740573871,"data":"\n"}
+,{"stream_name":"stdout","time":241.740579391,"data":"                    caution_and_advice      0.653     0.676     0.664      1070\n"}
+,{"stream_name":"stdout","time":241.74058521,"data":"      displaced_people_and_evacuations      0.856     0.895     0.875       790\n"}
+,{"stream_name":"stdout","time":241.740591067,"data":"     infrastructure_and_utility_damage      0.785     0.812     0.798      1617\n"}
+,{"stream_name":"stdout","time":241.740596799,"data":"                injured_or_dead_people      0.906     0.907     0.906      1447\n"}
+,{"stream_name":"stdout","time":241.740602614,"data":"               missing_or_found_people      0.700     0.778     0.737        72\n"}
+,{"stream_name":"stdout","time":241.740608311,"data":"                      not_humanitarian      0.559     0.612     0.584      1245\n"}
+,{"stream_name":"stdout","time":241.740614486,"data":"            other_relevant_information      0.547     0.529     0.538      2407\n"}
+,{"stream_name":"stdout","time":241.740620214,"data":"              requests_or_urgent_needs      0.506     0.603     0.550       521\n"}
+,{"stream_name":"stdout","time":241.74062575,"data":"rescue_volunteering_or_donation_effort      0.856     0.821     0.838      4219\n"}
+,{"stream_name":"stdout","time":241.740631741,"data":"                  sympathy_and_support      0.831     0.783     0.807      1772\n"}
+,{"stream_name":"stdout","time":241.740637163,"data":"\n"}
+,{"stream_name":"stdout","time":241.740642533,"data":"                              accuracy                          0.746     15160\n"}
+,{"stream_name":"stdout","time":241.740648144,"data":"                             macro avg      0.720     0.742     0.730     15160\n"}
+,{"stream_name":"stdout","time":241.740666303,"data":"                          weighted avg      0.750     0.746     0.747     15160\n"}
+,{"stream_name":"stdout","time":241.740671547,"data":"\n"}
+,{"stream_name":"stdout","time":393.697478275,"data":"earthquake  macro-F1 seen=0.746  unseen=0.608\n"}
+,{"stream_name":"stdout","time":547.499299119,"data":"flood       macro-F1 seen=0.654  unseen=0.577\n"}
+,{"stream_name":"stdout","time":624.313542227,"data":"hurricane   macro-F1 seen=0.719  unseen=0.659\n"}
+,{"stream_name":"stdout","time":785.009609325,"data":"wildfire    macro-F1 seen=0.679  unseen=0.619\n"}
+,{"stream_name":"stdout","time":785.085226131,"data":"{\n"}
+,{"stream_name":"stdout","time":785.085263568,"data":"  \"in_distribution\": {\n"}
+,{"stream_name":"stdout","time":785.085270611,"data":"    \"dev\": {\n"}
+,{"stream_name":"stdout","time":785.085276484,"data":"      \"accuracy\": 0.7428,\n"}
+,{"stream_name":"stdout","time":785.085281964,"data":"      \"macro_f1\": 0.7215,\n"}
+,{"stream_name":"stdout","time":785.085287068,"data":"      \"weighted_f1\": 0.7443\n"}
+,{"stream_name":"stdout","time":785.085292943,"data":"    },\n"}
+,{"stream_name":"stdout","time":785.085298216,"data":"    \"test\": {\n"}
+,{"stream_name":"stdout","time":785.085303385,"data":"      \"accuracy\": 0.7462,\n"}
+,{"stream_name":"stdout","time":785.085308998,"data":"      \"macro_f1\": 0.7298,\n"}
+,{"stream_name":"stdout","time":785.085314272,"data":"      \"weighted_f1\": 0.7475\n"}
+,{"stream_name":"stdout","time":785.085319718,"data":"    }\n"}
+,{"stream_name":"stdout","time":785.085324906,"data":"  },\n"}
+,{"stream_name":"stdout","time":785.08533009,"data":"  \"leave_one_type_out\": {\n"}
+,{"stream_name":"stdout","time":785.085335621,"data":"    \"earthquake\": {\n"}
+,{"stream_name":"stdout","time":785.085340998,"data":"      \"unseen\": {\n"}
+,{"stream_name":"stdout","time":785.085346823,"data":"        \"accuracy\": 0.7394,\n"}
+,{"stream_name":"stdout","time":785.085352734,"data":"        \"macro_f1\": 0.608,\n"}
+,{"stream_name":"stdout","time":785.085358328,"data":"        \"weighted_f1\": 0.7568\n"}
+,{"stream_name":"stdout","time":785.085384665,"data":"      },\n"}
+,{"stream_name":"stdout","time":785.085392145,"data":"      \"seen\": {\n"}
+,{"stream_name":"stdout","time":785.085398014,"data":"        \"accuracy\": 0.8184,\n"}
+,{"stream_name":"stdout","time":785.085403825,"data":"        \"macro_f1\": 0.7464,\n"}
+,{"stream_name":"stdout","time":785.08540978,"data":"        \"weighted_f1\": 0.8166\n"}
+,{"stream_name":"stdout","time":785.085415391,"data":"      }\n"}
+,{"stream_name":"stdout","time":785.085421178,"data":"    },\n"}
+,{"stream_name":"stdout","time":785.085426643,"data":"    \"flood\": {\n"}
+,{"stream_name":"stdout","time":785.085431986,"data":"      \"unseen\": {\n"}
+,{"stream_name":"stdout","time":785.085437172,"data":"        \"accuracy\": 0.6287,\n"}
+,{"stream_name":"stdout","time":785.085443535,"data":"        \"macro_f1\": 0.5773,\n"}
+,{"stream_name":"stdout","time":785.085448007,"data":"        \"weighted_f1\": 0.654\n"}
+,{"stream_name":"stdout","time":785.085451634,"data":"      },\n"}
+,{"stream_name":"stdout","time":785.085455122,"data":"      \"seen\": {\n"}
+,{"stream_name":"stdout","time":785.085458621,"data":"        \"accuracy\": 0.7407,\n"}
+,{"stream_name":"stdout","time":785.085464264,"data":"        \"macro_f1\": 0.6538,\n"}
+,{"stream_name":"stdout","time":785.085469636,"data":"        \"weighted_f1\": 0.7397\n"}
+,{"stream_name":"stdout","time":785.085490086,"data":"      }\n"}
+,{"stream_name":"stdout","time":785.085494785,"data":"    },\n"}
+,{"stream_name":"stdout","time":785.085499179,"data":"    \"hurricane\": {\n"}
+,{"stream_name":"stdout","time":785.085503884,"data":"      \"unseen\": {\n"}
+,{"stream_name":"stdout","time":785.08550824,"data":"        \"accuracy\": 0.6783,\n"}
+,{"stream_name":"stdout","time":785.085512776,"data":"        \"macro_f1\": 0.6588,\n"}
+,{"stream_name":"stdout","time":785.085517034,"data":"        \"weighted_f1\": 0.6747\n"}
+,{"stream_name":"stdout","time":785.08552156,"data":"      },\n"}
+,{"stream_name":"stdout","time":785.085525668,"data":"      \"seen\": {\n"}
+,{"stream_name":"stdout","time":785.085530094,"data":"        \"accuracy\": 0.7304,\n"}
+,{"stream_name":"stdout","time":785.085534565,"data":"        \"macro_f1\": 0.7186,\n"}
+,{"stream_name":"stdout","time":785.085539,"data":"        \"weighted_f1\": 0.7313\n"}
+,{"stream_name":"stdout","time":785.08554328,"data":"      }\n"}
+,{"stream_name":"stdout","time":785.085547284,"data":"    },\n"}
+,{"stream_name":"stdout","time":785.085551624,"data":"    \"wildfire\": {\n"}
+,{"stream_name":"stdout","time":785.0855562,"data":"      \"unseen\": {\n"}
+,{"stream_name":"stdout","time":785.085560711,"data":"        \"accuracy\": 0.7082,\n"}
+,{"stream_name":"stdout","time":785.085564956,"data":"        \"macro_f1\": 0.6189,\n"}
+,{"stream_name":"stdout","time":785.08556901,"data":"        \"weighted_f1\": 0.7142\n"}
+,{"stream_name":"stdout","time":785.085573326,"data":"      },\n"}
+,{"stream_name":"stdout","time":785.085577512,"data":"      \"seen\": {\n"}
+,{"stream_name":"stdout","time":785.085581812,"data":"        \"accuracy\": 0.7576,\n"}
+,{"stream_name":"stdout","time":785.085586474,"data":"        \"macro_f1\": 0.679,\n"}
+,{"stream_name":"stdout","time":785.085590942,"data":"        \"weighted_f1\": 0.7594\n"}
+,{"stream_name":"stdout","time":785.085595704,"data":"      }\n"}
+,{"stream_name":"stdout","time":785.085599949,"data":"    }\n"}
+,{"stream_name":"stdout","time":785.08560448,"data":"  }\n"}
+,{"stream_name":"stdout","time":785.085608751,"data":"}\n"}
+,{"stream_name":"stderr","time":789.067921019,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":789.067962118,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":789.294595803,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":789.294633049,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":790.259623727,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":790.388191119,"data":"[NbConvertApp] Writing 454315 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":793.922488584,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":794.674430437,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":794.674463452,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":794.674694525,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":794.674847933,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":794.675022747,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":794.675284597,"data":"[NbConvertApp] Writing 333491 bytes to __results__.html\n"}
+]

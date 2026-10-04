@@ -1,0 +1,17 @@
+# Dataset copies (re-created by notebooks/01_eda_baseline.py)
+data/*.csv
+outputs/**/humaid.csv
+
+# Model checkpoints
+*.pt
+*.bin
+*.safetensors
+checkpoint-*/
+
+# Credentials — never commit
+kaggle.json
+access_token
+.env
+
+__pycache__/
+.ipynb_checkpoints/
