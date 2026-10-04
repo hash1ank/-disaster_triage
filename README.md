@@ -96,6 +96,35 @@ by both models. Full table in `outputs/kaggle_02/transformer_confounder_probe.cs
 
 Not yet run for the transformers: cross-disaster (leave-one-type-out) evaluation.
 
+### Backbone search (notebook 03)
+
+Same recipe as notebook 02 (3 epochs, batch 32, max length 96, one seed); only the
+learning rate differs per model. Two T4 GPUs in parallel, 52 minutes in total.
+
+| Model | Learning rate | Test accuracy | Test macro-F1 | Training time |
+|---|---|---|---|---|
+| BERT-base (reference) | 2e-5 | 0.782 | 0.766 | 12.5 min |
+| ModernBERT-base | 5e-5 | 0.784 | 0.762 | 21.6 min |
+| DeBERTa-v3-base | 2e-5 | 0.778 | 0.763 | 20.7 min |
+| ModernBERT-large | 2e-5 | 0.783 | 0.768 | 51.2 min |
+| Ensemble of the three new models | | 0.790 | 0.774 | |
+
+What this shows:
+
+- **Newer and larger backbones do not help on their own.** All four single models are
+  within 0.007 macro-F1 of each other, which is inside single-seed noise. The task
+  appears to have a ceiling of about 0.77 with plain fine-tuning.
+- **More training would not help either.** ModernBERT-large had its best dev score after
+  epoch 1 and ModernBERT-base after epoch 2; both declined afterwards.
+- **Averaging the three models gives 0.774**, the best number so far, by a small margin.
+- **Confounder probe: none of the three new models labels any of the 4 routine
+  construction or maintenance sentences as not humanitarian.** Full table in
+  `outputs/kaggle_03/backbone_confounder_probe.csv`.
+
+Backbone choice for our method: a base-size model. ModernBERT-large costs four times the
+training time of BERT for no measurable gain, which would make ablations with three seeds
+impractical on free GPUs.
+
 ## 4. Roadmap
 
 - [x] Project setup, Kaggle link, data download
@@ -104,7 +133,8 @@ Not yet run for the transformers: cross-disaster (leave-one-type-out) evaluation
 - [x] Baselines 2 and 3: BERT-base and Twitter-RoBERTa fine-tuning (GPU), official split
 - [ ] Cross-disaster evaluation for the transformer baselines
 - [ ] Confounder set: write and hand-verify the minimal pairs (start early, it is manual work)
-- [ ] Our model: ModernBERT/DeBERTa-v3 + LoRA
+- [x] Backbone search: ModernBERT-base, DeBERTa-v3-base, ModernBERT-large, and their ensemble
+- [ ] Our model: base-size backbone + LoRA
 - [ ] Add the two heads and the supervised contrastive loss
 - [ ] Add event masking
 - [ ] Ablations: remove one component at a time
@@ -121,7 +151,8 @@ Class imbalance is handled with a class-weighted (or focal) loss, not oversampli
 notebooks/
   01_eda_baseline.py        source for each run, written as "# %%" cells
   02_transformer_baselines.py
-  kaggle_01/, kaggle_02/    what gets pushed: kernel-metadata.json + generated .ipynb
+  03_backbone_search.py
+  kaggle_01/ … kaggle_03/   what gets pushed: kernel-metadata.json + generated .ipynb
 src/
   make_notebook.py          converts a "# %%" .py file into a .ipynb
   kaggle_run.py             push → stream live logs → download outputs

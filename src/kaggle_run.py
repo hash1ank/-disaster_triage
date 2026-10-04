@@ -14,6 +14,7 @@ import time
 from make_notebook import convert
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.environ["PYTHONUTF8"] = "1"  # Kaggle logs contain characters the Windows console encoding rejects
 
 
 def status(kernel):
