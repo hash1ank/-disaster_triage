@@ -1,0 +1,15 @@
+{
+  "id": "shashankdixithaina/humaid-04-jev-pipeline",
+  "title": "HumAID 04 JEV Pipeline",
+  "code_file": "humaid-04-jev-pipeline.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": ["shashankdixithaina/humaid-01-eda-baseline"],
+  "model_sources": []
+}

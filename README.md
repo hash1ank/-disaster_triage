@@ -23,14 +23,19 @@ responders can prioritise actionable messages.
 ### Our angle: confounder-robust triage
 
 HumAID cannot teach point 2 by itself, because every tweet in it was collected during a
-real disaster. That gap is the contribution. Four parts:
+real disaster. That gap is the contribution. The method is a three-stage pipeline trained
+with a purpose-built confounder set:
 
-| # | Component | What it is |
+| Part | What it is | Status |
 |---|---|---|
-| 1 | **Confounder challenge set** | 300–500 hand-verified minimal pairs (routine construction or maintenance, figurative language, past events, drills) that share words with real disaster reports. A separate portion is used for training; the test pairs are never trained on. |
-| 2 | **Modern backbone** | ModernBERT or DeBERTa-v3 with LoRA, instead of BERT. |
-| 3 | **Two heads + contrastive loss** | Head A: is this an actual, ongoing disaster (real / routine / figurative)? Head B: humanitarian category. A supervised contrastive loss with hard negatives pushes each minimal pair apart in embedding space. |
-| 4 | **Event masking** | Event and place names ("Harvey", "Kerala") are replaced by a placeholder so the model cannot memorise events; evaluated by holding out whole disaster types. |
+| **Confounder set** | Sentences grouped by anchor entity (bridge, road, power lines, ...): for each entity, real disaster reports and look-alikes (routine construction or maintenance, figurative, past or fiction, drills). Split by entity, so test entities are never seen in training. Target 300–500 hand-verified sentences. | 240-sentence draft, unverified |
+| **Stage 1: anchor entity** | Find the thing the tweet is about and mark it: `[E] bridge [/E] closed for repair work`. Currently a word list (`src/anchor_entities.py`). | First version run |
+| **Stage 2: JEV (Joint Entity–Event) model** | ModernBERT-base reads the sentence and the marked entity together and decides whether this is a real disaster. Optionally trained with a supervised contrastive loss, where sentences sharing an entity but not a reality are hard negatives. | First version run |
+| **Stage 3: classifier** | Assigns the humanitarian category from the same joint representation. If stage 2 says "not real", the output is forced to "not humanitarian". | First version run |
+| **Event masking** | Event and place names ("Harvey", "Kerala") replaced by a placeholder so the model cannot memorise events; evaluated by holding out whole disaster types. | Not started |
+
+Full fine-tuning is used throughout. LoRA was in the original plan but has been dropped:
+a base-size model trains in 13 to 26 minutes, and the baselines were fully fine-tuned.
 
 The headline result we are aiming for: standard baselines score well on HumAID but fail
 the confounder set, while our model holds up on both.
@@ -125,6 +130,46 @@ Backbone choice for our method: a base-size model. ModernBERT-large costs four t
 training time of BERT for no measurable gain, which would make ablations with three seeds
 impractical on free GPUs.
 
+### Pipeline, first run (notebook 04)
+
+ModernBERT-base, 3 epochs, lr 5e-5, one seed, one component added per run. Each batch is
+28 HumAID tweets, plus (in the last three runs) 4 confounder training sentences about one
+anchor entity: 2 real and 2 look-alikes. The confounder test split has 30 real reports
+and 50 look-alikes about 10 anchor entities that never appear in training.
+
+| Run | HumAID accuracy | HumAID macro-F1 | Real reports kept | Look-alikes rejected |
+|---|---|---|---|---|
+| `baseline` (HumAID only) | 0.782 | 0.760 | 30 of 30 | 15 of 50 (30%) |
+| `plus_confounders` (+ confounder training data) | 0.782 | 0.767 | 29 of 30 | 40 of 50 (80%) |
+| `jev` (+ anchor entity, JEV model, gated classifier) | 0.771 | 0.759 | 29 of 30 | 45 of 50 (90%) |
+| `jev_contrastive` (+ contrastive loss) | 0.774 | 0.756 | 28 of 30 | 45 of 50 (90%) |
+
+Look-alikes rejected, by type:
+
+| Run | Routine (26) | Figurative (6) | Past or fiction (9) | Drill (9) |
+|---|---|---|---|---|
+| `baseline` | 12% | 67% | 56% | 33% |
+| `plus_confounders` | 73% | 83% | 89% | 89% |
+| `jev` | 88% | 67% | 100% | 100% |
+| `jev_contrastive` | 85% | 100% | 100% | 89% |
+
+What this shows, and what it does not:
+
+- **The baseline fails where the faculty said it would.** It rejects 3 of 26 routine
+  construction and maintenance sentences.
+- **Most of the fix comes from the training data.** 160 confounder sentences take
+  look-alike rejection from 30% to 80% on entities the model never saw, with no loss on HumAID.
+- **The JEV pipeline scores higher again (90%), mainly on routine sentences, but this is
+  not yet a reliable difference.** It is 5 sentences out of 50 from one seed, and the
+  `plus_confounders` run itself moved between 80% and 90% from one epoch to the next.
+- **The contrastive loss shows no benefit in this form.**
+- **The JEV runs are about 1 point lower in HumAID accuracy** (0.771 and 0.774 against 0.782).
+- The anchor-entity word list finds an entity in 100% of confounder test sentences but
+  only 38% of HumAID training tweets; without one the model falls back to the sentence.
+
+Caveats: the confounder set is an unverified draft written by an AI assistant, in one
+style; the test split is 80 sentences; one seed per run.
+
 ## 4. Roadmap
 
 - [x] Project setup, Kaggle link, data download
@@ -132,10 +177,12 @@ impractical on free GPUs.
 - [x] Baseline 1: TF-IDF + Logistic Regression, in-distribution and cross-disaster
 - [x] Baselines 2 and 3: BERT-base and Twitter-RoBERTa fine-tuning (GPU), official split
 - [ ] Cross-disaster evaluation for the transformer baselines
-- [ ] Confounder set: write and hand-verify the minimal pairs (start early, it is manual work)
+- [x] Confounder set: 240-sentence draft organised by anchor entity
+- [ ] Confounder set: hand-verify the draft, then grow it to 300–500 sentences with new anchor entities
 - [x] Backbone search: ModernBERT-base, DeBERTa-v3-base, ModernBERT-large, and their ensemble
-- [ ] Our model: base-size backbone + LoRA
-- [ ] Add the two heads and the supervised contrastive loss
+- [x] Pipeline, first version: anchor entity → JEV model → gated classifier, with a 4-run ablation ladder
+- [ ] Repeat the ladder with 3 seeds, to tell `plus_confounders` and `jev` apart
+- [ ] Improve the pipeline: anchor coverage on HumAID, contrastive loss focused on hard negatives
 - [ ] Add event masking
 - [ ] Ablations: remove one component at a time
 - [ ] Final evaluation on three test beds (official test, cross-disaster, confounder set), 3 seeds
@@ -152,11 +199,13 @@ notebooks/
   01_eda_baseline.py        source for each run, written as "# %%" cells
   02_transformer_baselines.py
   03_backbone_search.py
-  kaggle_01/ … kaggle_03/   what gets pushed: kernel-metadata.json + generated .ipynb
+  04_jev_pipeline.py
+  kaggle_01/ … kaggle_04/   what gets pushed: kernel-metadata.json + generated .ipynb
 src/
   make_notebook.py          converts a "# %%" .py file into a .ipynb
+  anchor_entities.py        stage 1: word list that finds and marks the anchor entity
   kaggle_run.py             push → stream live logs → download outputs
-confounder_set/             the hand-verified minimal pairs (to be written)
+confounder_set/             draft confounder set and its labelling guide
 outputs/kaggle_0*/          metrics, plots and logs pulled back from Kaggle
 data/                       local dataset copy (git-ignored)
 ```

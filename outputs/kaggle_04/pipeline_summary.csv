@@ -1,0 +1,5 @@
+,humaid_acc,humaid_macro_f1,real_kept,lookalike_rejected,balanced,routine,figurative,past_or_fiction,drill
+baseline,0.7818,0.7598,1.0,0.3,0.65,0.115,0.667,0.556,0.333
+plus_confounders,0.7816,0.7671,0.967,0.8,0.883,0.731,0.833,0.889,0.889
+jev,0.7708,0.7588,0.967,0.9,0.933,0.885,0.667,1.0,1.0
+jev_contrastive,0.7737,0.7555,0.933,0.9,0.917,0.846,1.0,1.0,0.889

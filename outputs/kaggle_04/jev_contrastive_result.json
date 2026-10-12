@@ -1,0 +1,67 @@
+{
+  "config": {
+    "confounders": true,
+    "jev": true,
+    "contrastive": true
+  },
+  "checkpoint": "answerdotai/ModernBERT-base",
+  "lr": 5e-05,
+  "dev_history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.7525,
+      "macro_f1": 0.7306,
+      "weighted_f1": 0.7532,
+      "confounder_balanced": 0.937
+    },
+    {
+      "epoch": 2,
+      "accuracy": 0.7715,
+      "macro_f1": 0.7539,
+      "weighted_f1": 0.7678,
+      "confounder_balanced": 0.917
+    },
+    {
+      "epoch": 3,
+      "accuracy": 0.7706,
+      "macro_f1": 0.7513,
+      "weighted_f1": 0.7703,
+      "confounder_balanced": 0.913
+    }
+  ],
+  "humaid_test": {
+    "accuracy": 0.7737,
+    "macro_f1": 0.7555,
+    "weighted_f1": 0.7704,
+    "macro_f1_ungated": 0.7536
+  },
+  "per_class_f1": {
+    "caution_and_advice": 0.692,
+    "displaced_people_and_evacuations": 0.89,
+    "infrastructure_and_utility_damage": 0.825,
+    "injured_or_dead_people": 0.924,
+    "missing_or_found_people": 0.785,
+    "not_humanitarian": 0.622,
+    "other_relevant_information": 0.533,
+    "requests_or_urgent_needs": 0.582,
+    "rescue_volunteering_or_donation_effort": 0.871,
+    "sympathy_and_support": 0.832
+  },
+  "confounder_test": {
+    "n_real": 30,
+    "n_lookalike": 50,
+    "real_kept": 0.933,
+    "real_exact_category": 0.733,
+    "lookalike_rejected": 0.9,
+    "balanced": 0.917,
+    "rejected_routine": 0.846,
+    "rejected_figurative": 1.0,
+    "rejected_past_or_fiction": 1.0,
+    "rejected_drill": 0.889
+  },
+  "anchor_found": {
+    "humaid_train": 0.376,
+    "confounder_test": 1.0
+  },
+  "train_minutes": 26.6
+}

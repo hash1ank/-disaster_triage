@@ -1,0 +1,288 @@
+[{"stream_name":"stderr","time":7.083784503,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.083858588,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":8.095568696,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.0956004,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.095606849,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.095611158,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.791458264,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.791492431,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.791498726,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.791504339,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":18.938498916,"data":"[00:00] GPUs: 2 x Tesla T4 | DEBUG=False\n"}
+,{"stream_name":"stdout","time":19.000949201,"data":"[00:00] confounder set: 240 sentences, 30 anchor entities, verified: 0\n"}
+,{"stream_name":"stdout","time":19.048814114,"data":"[00:00] GPU 0: starting baseline\n"}
+,{"stream_name":"stdout","time":19.048847428,"data":"[00:00] GPU 1: starting jev\n"}
+,{"stream_name":"stdout","time":67.438824422,"data":"[00:48] baseline | config {'confounders': False, 'jev': False, 'contrastive': False} | train=53531 | anchor found: HumAID train 37.6%, confounder test 100.0%\n"}
+,{"stream_name":"stdout","time":75.275071302,"data":"[00:56] jev | config {'confounders': True, 'jev': True, 'contrastive': False} | train=53531 | anchor found: HumAID train 37.6%, confounder test 100.0%\n"}
+,{"stream_name":"stdout","time":98.144146106,"data":"[01:19] baseline | epoch 1/3 step 100/5736 loss cat 2.195 | 3.9 it/s | ETA 24.1 min\n"}
+,{"stream_name":"stdout","time":102.006045163,"data":"[01:23] jev | epoch 1/3 step 100/5736 loss cat 2.177 real 0.588 | 4.1 it/s | ETA 23.2 min\n"}
+,{"stream_name":"stdout","time":120.631799761,"data":"[01:42] baseline | epoch 1/3 step 200/5736 loss cat 1.345 | 4.2 it/s | ETA 22.2 min\n"}
+,{"stream_name":"stdout","time":127.133751473,"data":"[01:48] jev | epoch 1/3 step 200/5736 loss cat 1.834 real 0.477 | 4.0 it/s | ETA 23.0 min\n"}
+,{"stream_name":"stdout","time":143.747641959,"data":"[02:05] baseline | epoch 1/3 step 300/5736 loss cat 0.925 | 4.2 it/s | ETA 21.5 min\n"}
+,{"stream_name":"stdout","time":152.967150677,"data":"[02:14] jev | epoch 1/3 step 300/5736 loss cat 1.441 real 0.405 | 4.0 it/s | ETA 22.8 min\n"}
+,{"stream_name":"stdout","time":168.06251805,"data":"[02:29] baseline | epoch 1/3 step 400/5736 loss cat 0.870 | 4.2 it/s | ETA 21.3 min\n"}
+,{"stream_name":"stdout","time":179.378321326,"data":"[02:40] jev | epoch 1/3 step 400/5736 loss cat 1.029 real 0.327 | 3.9 it/s | ETA 22.7 min\n"}
+,{"stream_name":"stdout","time":191.292750592,"data":"[02:52] baseline | epoch 1/3 step 500/5736 loss cat 0.820 | 4.2 it/s | ETA 20.7 min\n"}
+,{"stream_name":"stdout","time":204.718187049,"data":"[03:06] jev | epoch 1/3 step 500/5736 loss cat 0.824 real 0.279 | 3.9 it/s | ETA 22.2 min\n"}
+,{"stream_name":"stdout","time":215.013909364,"data":"[03:16] baseline | epoch 1/3 step 600/5736 loss cat 0.782 | 4.2 it/s | ETA 20.3 min\n"}
+,{"stream_name":"stdout","time":230.469058593,"data":"[03:31] jev | epoch 1/3 step 600/5736 loss cat 0.800 real 0.260 | 3.9 it/s | ETA 21.8 min\n"}
+,{"stream_name":"stdout","time":238.585780889,"data":"[03:39] baseline | epoch 1/3 step 700/5736 loss cat 0.728 | 4.2 it/s | ETA 19.9 min\n"}
+,{"stream_name":"stdout","time":256.591103642,"data":"[03:57] jev | epoch 1/3 step 700/5736 loss cat 0.716 real 0.244 | 3.9 it/s | ETA 21.5 min\n"}
+,{"stream_name":"stdout","time":262.197217855,"data":"[04:03] baseline | epoch 1/3 step 800/5736 loss cat 0.738 | 4.2 it/s | ETA 19.5 min\n"}
+,{"stream_name":"stdout","time":282.699484709,"data":"[04:24] jev | epoch 1/3 step 800/5736 loss cat 0.684 real 0.237 | 3.9 it/s | ETA 21.1 min\n"}
+,{"stream_name":"stdout","time":285.649744035,"data":"[04:27] baseline | epoch 1/3 step 900/5736 loss cat 0.701 | 4.2 it/s | ETA 19.1 min\n"}
+,{"stream_name":"stdout","time":308.744871661,"data":"[04:50] jev | epoch 1/3 step 900/5736 loss cat 0.682 real 0.244 | 3.9 it/s | ETA 20.7 min\n"}
+,{"stream_name":"stdout","time":309.267425342,"data":"[04:50] baseline | epoch 1/3 step 1000/5736 loss cat 0.702 | 4.2 it/s | ETA 18.7 min\n"}
+,{"stream_name":"stdout","time":332.530004467,"data":"[05:13] baseline | epoch 1/3 step 1100/5736 loss cat 0.715 | 4.2 it/s | ETA 18.3 min\n"}
+,{"stream_name":"stdout","time":334.481292019,"data":"[05:15] jev | epoch 1/3 step 1000/5736 loss cat 0.651 real 0.225 | 3.9 it/s | ETA 20.3 min\n"}
+,{"stream_name":"stdout","time":355.884736132,"data":"[05:37] baseline | epoch 1/3 step 1200/5736 loss cat 0.686 | 4.2 it/s | ETA 17.9 min\n"}
+,{"stream_name":"stdout","time":360.717495383,"data":"[05:42] jev | epoch 1/3 step 1100/5736 loss cat 0.609 real 0.214 | 3.9 it/s | ETA 19.9 min\n"}
+,{"stream_name":"stdout","time":379.287388418,"data":"[06:00] baseline | epoch 1/3 step 1300/5736 loss cat 0.680 | 4.2 it/s | ETA 17.4 min\n"}
+,{"stream_name":"stdout","time":387.173868592,"data":"[06:08] jev | epoch 1/3 step 1200/5736 loss cat 0.610 real 0.215 | 3.9 it/s | ETA 19.5 min\n"}
+,{"stream_name":"stdout","time":403.238236002,"data":"[06:24] baseline | epoch 1/3 step 1400/5736 loss cat 0.677 | 4.2 it/s | ETA 17.1 min\n"}
+,{"stream_name":"stdout","time":413.979744314,"data":"[06:35] jev | epoch 1/3 step 1300/5736 loss cat 0.600 real 0.221 | 3.9 it/s | ETA 19.1 min\n"}
+,{"stream_name":"stdout","time":426.733345689,"data":"[06:48] baseline | epoch 1/3 step 1500/5736 loss cat 0.653 | 4.2 it/s | ETA 16.7 min\n"}
+,{"stream_name":"stdout","time":440.791919316,"data":"[07:02] jev | epoch 1/3 step 1400/5736 loss cat 0.600 real 0.205 | 3.9 it/s | ETA 18.8 min\n"}
+,{"stream_name":"stdout","time":450.160309922,"data":"[07:11] baseline | epoch 1/3 step 1600/5736 loss cat 0.667 | 4.2 it/s | ETA 16.3 min\n"}
+,{"stream_name":"stdout","time":467.343204542,"data":"[07:28] jev | epoch 1/3 step 1500/5736 loss cat 0.599 real 0.196 | 3.8 it/s | ETA 18.4 min\n"}
+,{"stream_name":"stdout","time":474.078201009,"data":"[07:35] baseline | epoch 1/3 step 1700/5736 loss cat 0.663 | 4.2 it/s | ETA 15.9 min\n"}
+,{"stream_name":"stdout","time":493.582745739,"data":"[07:54] jev | epoch 1/3 step 1600/5736 loss cat 0.570 real 0.210 | 3.8 it/s | ETA 17.9 min\n"}
+,{"stream_name":"stdout","time":497.568380045,"data":"[07:58] baseline | epoch 1/3 step 1800/5736 loss cat 0.667 | 4.2 it/s | ETA 15.5 min\n"}
+,{"stream_name":"stdout","time":519.886436136,"data":"[08:21] jev | epoch 1/3 step 1700/5736 loss cat 0.596 real 0.205 | 3.8 it/s | ETA 17.5 min\n"}
+,{"stream_name":"stdout","time":520.993209245,"data":"[08:22] baseline | epoch 1/3 step 1900/5736 loss cat 0.650 | 4.2 it/s | ETA 15.1 min\n"}
+,{"stream_name":"stdout","time":542.073880147,"data":"[08:43] baseline | epoch 1 DEV {'accuracy': 0.7699, 'macro_f1': 0.751, 'weighted_f1': 0.7678} | CONFOUNDER real_kept 1.0 lookalike_rejected 0.26\n"}
+,{"stream_name":"stdout","time":545.752669123,"data":"[08:47] jev | epoch 1/3 step 1800/5736 loss cat 0.622 real 0.207 | 3.8 it/s | ETA 17.1 min\n"}
+,{"stream_name":"stdout","time":563.480398521,"data":"[09:04] baseline | epoch 2/3 step 2000/5736 loss cat 0.432 | 4.1 it/s | ETA 15.3 min\n"}
+,{"stream_name":"stdout","time":571.907104485,"data":"[09:13] jev | epoch 1/3 step 1900/5736 loss cat 0.570 real 0.206 | 3.8 it/s | ETA 16.6 min\n"}
+,{"stream_name":"stdout","time":587.078511205,"data":"[09:28] baseline | epoch 2/3 step 2100/5736 loss cat 0.482 | 4.1 it/s | ETA 14.8 min\n"}
+,{"stream_name":"stdout","time":593.892483996,"data":"[09:35] jev | epoch 1 DEV {'accuracy': 0.7559, 'macro_f1': 0.7312, 'weighted_f1': 0.7565} | CONFOUNDER real_kept 1.0 lookalike_rejected 0.78\n"}
+,{"stream_name":"stdout","time":610.44855269,"data":"[09:51] baseline | epoch 2/3 step 2200/5736 loss cat 0.475 | 4.1 it/s | ETA 14.4 min\n"}
+,{"stream_name":"stdout","time":617.814095826,"data":"[09:59] jev | epoch 2/3 step 2000/5736 loss cat 0.391 real 0.116 | 3.7 it/s | ETA 16.8 min\n"}
+,{"stream_name":"stdout","time":634.042181186,"data":"[10:15] baseline | epoch 2/3 step 2300/5736 loss cat 0.501 | 4.1 it/s | ETA 14.0 min\n"}
+,{"stream_name":"stdout","time":644.03058005,"data":"[10:25] jev | epoch 2/3 step 2100/5736 loss cat 0.452 real 0.158 | 3.7 it/s | ETA 16.4 min\n"}
+,{"stream_name":"stdout","time":657.490568663,"data":"[10:38] baseline | epoch 2/3 step 2400/5736 loss cat 0.462 | 4.1 it/s | ETA 13.6 min\n"}
+,{"stream_name":"stdout","time":670.219776144,"data":"[10:51] jev | epoch 2/3 step 2200/5736 loss cat 0.453 real 0.166 | 3.7 it/s | ETA 15.9 min\n"}
+,{"stream_name":"stdout","time":680.824665623,"data":"[11:02] baseline | epoch 2/3 step 2500/5736 loss cat 0.482 | 4.1 it/s | ETA 13.1 min\n"}
+,{"stream_name":"stdout","time":696.227492792,"data":"[11:17] jev | epoch 2/3 step 2300/5736 loss cat 0.438 real 0.140 | 3.7 it/s | ETA 15.4 min\n"}
+,{"stream_name":"stdout","time":704.207479416,"data":"[11:25] baseline | epoch 2/3 step 2600/5736 loss cat 0.498 | 4.1 it/s | ETA 12.7 min\n"}
+,{"stream_name":"stdout","time":722.44977829,"data":"[11:43] jev | epoch 2/3 step 2400/5736 loss cat 0.439 real 0.134 | 3.7 it/s | ETA 14.9 min\n"}
+,{"stream_name":"stdout","time":727.640680157,"data":"[11:49] baseline | epoch 2/3 step 2700/5736 loss cat 0.490 | 4.1 it/s | ETA 12.3 min\n"}
+,{"stream_name":"stdout","time":748.598308712,"data":"[12:09] jev | epoch 2/3 step 2500/5736 loss cat 0.462 real 0.140 | 3.7 it/s | ETA 14.5 min\n"}
+,{"stream_name":"stdout","time":751.098976907,"data":"[12:12] baseline | epoch 2/3 step 2800/5736 loss cat 0.483 | 4.1 it/s | ETA 11.9 min\n"}
+,{"stream_name":"stdout","time":774.591219387,"data":"[12:35] baseline | epoch 2/3 step 2900/5736 loss cat 0.477 | 4.1 it/s | ETA 11.4 min\n"}
+,{"stream_name":"stdout","time":775.00117488,"data":"[12:36] jev | epoch 2/3 step 2600/5736 loss cat 0.485 real 0.177 | 3.7 it/s | ETA 14.0 min\n"}
+,{"stream_name":"stdout","time":798.309654652,"data":"[12:59] baseline | epoch 2/3 step 3000/5736 loss cat 0.487 | 4.1 it/s | ETA 11.0 min\n"}
+,{"stream_name":"stdout","time":801.10381967,"data":"[13:02] jev | epoch 2/3 step 2700/5736 loss cat 0.472 real 0.152 | 3.7 it/s | ETA 13.6 min\n"}
+,{"stream_name":"stdout","time":821.750675516,"data":"[13:23] baseline | epoch 2/3 step 3100/5736 loss cat 0.459 | 4.1 it/s | ETA 10.6 min\n"}
+,{"stream_name":"stdout","time":827.374934507,"data":"[13:28] jev | epoch 2/3 step 2800/5736 loss cat 0.444 real 0.145 | 3.7 it/s | ETA 13.1 min\n"}
+,{"stream_name":"stdout","time":845.331394538,"data":"[13:46] baseline | epoch 2/3 step 3200/5736 loss cat 0.475 | 4.1 it/s | ETA 10.2 min\n"}
+,{"stream_name":"stdout","time":853.635781321,"data":"[13:55] jev | epoch 2/3 step 2900/5736 loss cat 0.447 real 0.145 | 3.7 it/s | ETA 12.7 min\n"}
+,{"stream_name":"stdout","time":868.687578656,"data":"[14:10] baseline | epoch 2/3 step 3300/5736 loss cat 0.484 | 4.1 it/s | ETA 9.8 min\n"}
+,{"stream_name":"stdout","time":879.911430924,"data":"[14:21] jev | epoch 2/3 step 3000/5736 loss cat 0.421 real 0.150 | 3.7 it/s | ETA 12.2 min\n"}
+,{"stream_name":"stdout","time":891.971851112,"data":"[14:33] baseline | epoch 2/3 step 3400/5736 loss cat 0.465 | 4.1 it/s | ETA 9.4 min\n"}
+,{"stream_name":"stdout","time":906.235718853,"data":"[14:47] jev | epoch 2/3 step 3100/5736 loss cat 0.428 real 0.123 | 3.7 it/s | ETA 11.7 min\n"}
+,{"stream_name":"stdout","time":915.351404199,"data":"[14:56] baseline | epoch 2/3 step 3500/5736 loss cat 0.468 | 4.2 it/s | ETA 9.0 min\n"}
+,{"stream_name":"stdout","time":932.044248118,"data":"[15:13] jev | epoch 2/3 step 3200/5736 loss cat 0.449 real 0.148 | 3.7 it/s | ETA 11.3 min\n"}
+,{"stream_name":"stdout","time":938.557440588,"data":"[15:19] baseline | epoch 2/3 step 3600/5736 loss cat 0.503 | 4.2 it/s | ETA 8.6 min\n"}
+,{"stream_name":"stdout","time":958.396086052,"data":"[15:39] jev | epoch 2/3 step 3300/5736 loss cat 0.439 real 0.147 | 3.7 it/s | ETA 10.8 min\n"}
+,{"stream_name":"stdout","time":961.989795386,"data":"[15:43] baseline | epoch 2/3 step 3700/5736 loss cat 0.460 | 4.2 it/s | ETA 8.2 min\n"}
+,{"stream_name":"stdout","time":985.001938613,"data":"[16:06] jev | epoch 2/3 step 3400/5736 loss cat 0.452 real 0.124 | 3.7 it/s | ETA 10.4 min\n"}
+,{"stream_name":"stdout","time":985.48105035,"data":"[16:06] baseline | epoch 2/3 step 3800/5736 loss cat 0.461 | 4.2 it/s | ETA 7.8 min\n"}
+,{"stream_name":"stdout","time":1009.378817253,"data":"[16:30] baseline | epoch 2 DEV {'accuracy': 0.7786, 'macro_f1': 0.7542, 'weighted_f1': 0.7762} | CONFOUNDER real_kept 1.0 lookalike_rejected 0.3\n"}
+,{"stream_name":"stdout","time":1011.404073257,"data":"[16:32] jev | epoch 2/3 step 3500/5736 loss cat 0.444 real 0.145 | 3.7 it/s | ETA 9.9 min\n"}
+,{"stream_name":"stdout","time":1028.094206875,"data":"[16:49] baseline | epoch 3/3 step 3900/5736 loss cat 0.187 | 4.1 it/s | ETA 7.5 min\n"}
+,{"stream_name":"stdout","time":1037.936841601,"data":"[16:59] jev | epoch 2/3 step 3600/5736 loss cat 0.430 real 0.144 | 3.7 it/s | ETA 9.5 min\n"}
+,{"stream_name":"stdout","time":1051.520199692,"data":"[17:12] baseline | epoch 3/3 step 4000/5736 loss cat 0.278 | 4.1 it/s | ETA 7.1 min\n"}
+,{"stream_name":"stdout","time":1064.079082891,"data":"[17:25] jev | epoch 2/3 step 3700/5736 loss cat 0.413 real 0.136 | 3.7 it/s | ETA 9.0 min\n"}
+,{"stream_name":"stdout","time":1075.007569389,"data":"[17:36] baseline | epoch 3/3 step 4100/5736 loss cat 0.238 | 4.1 it/s | ETA 6.7 min\n"}
+,{"stream_name":"stdout","time":1090.513050629,"data":"[17:51] jev | epoch 2/3 step 3800/5736 loss cat 0.446 real 0.130 | 3.8 it/s | ETA 8.6 min\n"}
+,{"stream_name":"stdout","time":1098.250461291,"data":"[17:59] baseline | epoch 3/3 step 4200/5736 loss cat 0.232 | 4.1 it/s | ETA 6.3 min\n"}
+,{"stream_name":"stdout","time":1115.500398599,"data":"[18:16] jev | epoch 2 DEV {'accuracy': 0.769, 'macro_f1': 0.7475, 'weighted_f1': 0.7666} | CONFOUNDER real_kept 0.933 lookalike_rejected 0.9\n"}
+,{"stream_name":"stdout","time":1121.575741515,"data":"[18:22] baseline | epoch 3/3 step 4300/5736 loss cat 0.247 | 4.1 it/s | ETA 5.8 min\n"}
+,{"stream_name":"stdout","time":1136.110854526,"data":"[18:37] jev | epoch 3/3 step 3900/5736 loss cat 0.175 real 0.053 | 3.7 it/s | ETA 8.3 min\n"}
+,{"stream_name":"stdout","time":1145.021514942,"data":"[18:46] baseline | epoch 3/3 step 4400/5736 loss cat 0.223 | 4.1 it/s | ETA 5.4 min\n"}
+,{"stream_name":"stdout","time":1162.718153767,"data":"[19:04] jev | epoch 3/3 step 4000/5736 loss cat 0.245 real 0.063 | 3.7 it/s | ETA 7.9 min\n"}
+,{"stream_name":"stdout","time":1168.540559774,"data":"[19:09] baseline | epoch 3/3 step 4500/5736 loss cat 0.224 | 4.1 it/s | ETA 5.0 min\n"}
+,{"stream_name":"stdout","time":1188.918076958,"data":"[19:30] jev | epoch 3/3 step 4100/5736 loss cat 0.255 real 0.066 | 3.7 it/s | ETA 7.4 min\n"}
+,{"stream_name":"stdout","time":1191.955352544,"data":"[19:33] baseline | epoch 3/3 step 4600/5736 loss cat 0.216 | 4.1 it/s | ETA 4.6 min\n"}
+,{"stream_name":"stdout","time":1214.750351723,"data":"[19:56] jev | epoch 3/3 step 4200/5736 loss cat 0.224 real 0.038 | 3.7 it/s | ETA 6.9 min\n"}
+,{"stream_name":"stdout","time":1215.841068011,"data":"[19:57] baseline | epoch 3/3 step 4700/5736 loss cat 0.223 | 4.1 it/s | ETA 4.2 min\n"}
+,{"stream_name":"stdout","time":1239.08407713,"data":"[20:20] baseline | epoch 3/3 step 4800/5736 loss cat 0.197 | 4.1 it/s | ETA 3.8 min\n"}
+,{"stream_name":"stdout","time":1241.053078891,"data":"[20:22] jev | epoch 3/3 step 4300/5736 loss cat 0.245 real 0.047 | 3.7 it/s | ETA 6.5 min\n"}
+,{"stream_name":"stdout","time":1262.734740133,"data":"[20:44] baseline | epoch 3/3 step 4900/5736 loss cat 0.205 | 4.1 it/s | ETA 3.4 min\n"}
+,{"stream_name":"stdout","time":1267.418901667,"data":"[20:48] jev | epoch 3/3 step 4400/5736 loss cat 0.227 real 0.050 | 3.7 it/s | ETA 6.0 min\n"}
+,{"stream_name":"stdout","time":1286.123138154,"data":"[21:07] baseline | epoch 3/3 step 5000/5736 loss cat 0.217 | 4.1 it/s | ETA 3.0 min\n"}
+,{"stream_name":"stdout","time":1293.773198786,"data":"[21:15] jev | epoch 3/3 step 4500/5736 loss cat 0.245 real 0.064 | 3.7 it/s | ETA 5.6 min\n"}
+,{"stream_name":"stdout","time":1309.464551817,"data":"[21:30] baseline | epoch 3/3 step 5100/5736 loss cat 0.210 | 4.1 it/s | ETA 2.6 min\n"}
+,{"stream_name":"stdout","time":1319.817331703,"data":"[21:41] jev | epoch 3/3 step 4600/5736 loss cat 0.245 real 0.059 | 3.7 it/s | ETA 5.1 min\n"}
+,{"stream_name":"stdout","time":1332.741021318,"data":"[21:54] baseline | epoch 3/3 step 5200/5736 loss cat 0.241 | 4.1 it/s | ETA 2.2 min\n"}
+,{"stream_name":"stdout","time":1345.796440183,"data":"[22:07] jev | epoch 3/3 step 4700/5736 loss cat 0.237 real 0.048 | 3.7 it/s | ETA 4.7 min\n"}
+,{"stream_name":"stdout","time":1356.417121215,"data":"[22:17] baseline | epoch 3/3 step 5300/5736 loss cat 0.218 | 4.1 it/s | ETA 1.8 min\n"}
+,{"stream_name":"stdout","time":1371.910067089,"data":"[22:33] jev | epoch 3/3 step 4800/5736 loss cat 0.260 real 0.052 | 3.7 it/s | ETA 4.2 min\n"}
+,{"stream_name":"stdout","time":1379.817952707,"data":"[22:41] baseline | epoch 3/3 step 5400/5736 loss cat 0.224 | 4.1 it/s | ETA 1.4 min\n"}
+,{"stream_name":"stdout","time":1398.574101805,"data":"[22:59] jev | epoch 3/3 step 4900/5736 loss cat 0.225 real 0.050 | 3.7 it/s | ETA 3.8 min\n"}
+,{"stream_name":"stdout","time":1403.457794166,"data":"[23:04] baseline | epoch 3/3 step 5500/5736 loss cat 0.200 | 4.1 it/s | ETA 1.0 min\n"}
+,{"stream_name":"stdout","time":1424.486516049,"data":"[23:25] jev | epoch 3/3 step 5000/5736 loss cat 0.244 real 0.045 | 3.7 it/s | ETA 3.3 min\n"}
+,{"stream_name":"stdout","time":1426.643622534,"data":"[23:28] baseline | epoch 3/3 step 5600/5736 loss cat 0.221 | 4.1 it/s | ETA 0.5 min\n"}
+,{"stream_name":"stdout","time":1450.112495842,"data":"[23:51] baseline | epoch 3/3 step 5700/5736 loss cat 0.200 | 4.1 it/s | ETA 0.1 min\n"}
+,{"stream_name":"stdout","time":1450.635891168,"data":"[23:52] jev | epoch 3/3 step 5100/5736 loss cat 0.230 real 0.042 | 3.7 it/s | ETA 2.9 min\n"}
+,{"stream_name":"stdout","time":1476.998212511,"data":"[24:18] baseline | epoch 3 DEV {'accuracy': 0.7667, 'macro_f1': 0.7493, 'weighted_f1': 0.766} | CONFOUNDER real_kept 1.0 lookalike_rejected 0.32\n"}
+,{"stream_name":"stdout","time":1477.056203379,"data":"[24:18] jev | epoch 3/3 step 5200/5736 loss cat 0.225 real 0.053 | 3.7 it/s | ETA 2.4 min\n"}
+,{"stream_name":"stdout","time":1503.418215078,"data":"[24:44] jev | epoch 3/3 step 5300/5736 loss cat 0.226 real 0.060 | 3.7 it/s | ETA 2.0 min\n"}
+,{"stream_name":"stdout","time":1511.384120275,"data":"[24:52] baseline | HUMAID TEST {'accuracy': 0.7818, 'macro_f1': 0.7598, 'weighted_f1': 0.7792, 'macro_f1_ungated': 0.7598}\n"}
+,{"stream_name":"stdout","time":1511.38571349,"data":"[24:52] baseline | CONFOUNDER TEST {'n_real': 30, 'n_lookalike': 50, 'real_kept': 1.0, 'real_exact_category': 0.667, 'lookalike_rejected': 0.3, 'balanced': 0.65, 'rejected_routine': 0.115, 'rejected_figurative': 0.667, 'rejected_past_or_fiction': 0.556, 'rejected_drill': 0.333}\n"}
+,{"stream_name":"stdout","time":1511.482976413,"data":"[24:52] baseline | finished\n"}
+,{"stream_name":"stdout","time":1516.770618744,"data":"[24:58] GPU 0: starting plus_confounders\n"}
+,{"stream_name":"stdout","time":1529.597782237,"data":"[25:10] jev | epoch 3/3 step 5400/5736 loss cat 0.229 real 0.048 | 3.7 it/s | ETA 1.5 min\n"}
+,{"stream_name":"stdout","time":1545.20816174,"data":"[25:26] plus_confounders | config {'confounders': True, 'jev': False, 'contrastive': False} | train=53531 | anchor found: HumAID train 37.6%, confounder test 100.0%\n"}
+,{"stream_name":"stdout","time":1555.680738373,"data":"[25:37] jev | epoch 3/3 step 5500/5736 loss cat 0.226 real 0.055 | 3.7 it/s | ETA 1.1 min\n"}
+,{"stream_name":"stdout","time":1570.49130475,"data":"[25:51] plus_confounders | epoch 1/3 step 100/5736 loss cat 2.202 | 4.1 it/s | ETA 22.9 min\n"}
+,{"stream_name":"stdout","time":1581.867089448,"data":"[26:03] jev | epoch 3/3 step 5600/5736 loss cat 0.216 real 0.053 | 3.7 it/s | ETA 0.6 min\n"}
+,{"stream_name":"stdout","time":1594.817683534,"data":"[26:16] plus_confounders | epoch 1/3 step 200/5736 loss cat 1.358 | 4.1 it/s | ETA 22.5 min\n"}
+,{"stream_name":"stdout","time":1608.115909484,"data":"[26:29] jev | epoch 3/3 step 5700/5736 loss cat 0.227 real 0.068 | 3.7 it/s | ETA 0.2 min\n"}
+,{"stream_name":"stdout","time":1619.124678691,"data":"[26:40] plus_confounders | epoch 1/3 step 300/5736 loss cat 0.821 | 4.1 it/s | ETA 22.0 min\n"}
+,{"stream_name":"stdout","time":1636.567965383,"data":"[26:57] jev | epoch 3 DEV {'accuracy': 0.7689, 'macro_f1': 0.7517, 'weighted_f1': 0.7691} | CONFOUNDER real_kept 0.967 lookalike_rejected 0.9\n"}
+,{"stream_name":"stdout","time":1643.85578003,"data":"[27:05] plus_confounders | epoch 1/3 step 400/5736 loss cat 0.743 | 4.1 it/s | ETA 21.7 min\n"}
+,{"stream_name":"stdout","time":1668.474735819,"data":"[27:29] plus_confounders | epoch 1/3 step 500/5736 loss cat 0.694 | 4.1 it/s | ETA 21.4 min\n"}
+,{"stream_name":"stdout","time":1671.952731257,"data":"[27:33] jev | HUMAID TEST {'accuracy': 0.7708, 'macro_f1': 0.7588, 'weighted_f1': 0.7708, 'macro_f1_ungated': 0.758}\n"}
+,{"stream_name":"stdout","time":1671.954901837,"data":"[27:33] jev | CONFOUNDER TEST {'n_real': 30, 'n_lookalike': 50, 'real_kept': 0.967, 'real_exact_category': 0.833, 'lookalike_rejected': 0.9, 'balanced': 0.933, 'rejected_routine': 0.885, 'rejected_figurative': 0.667, 'rejected_past_or_fiction': 1.0, 'rejected_drill': 1.0}\n"}
+,{"stream_name":"stdout","time":1672.037081059,"data":"[27:33] jev | finished\n"}
+,{"stream_name":"stdout","time":1674.119999013,"data":"[27:35] GPU 1: starting jev_contrastive\n"}
+,{"stream_name":"stdout","time":1694.110224526,"data":"[27:55] plus_confounders | epoch 1/3 step 600/5736 loss cat 0.667 | 4.1 it/s | ETA 21.1 min\n"}
+,{"stream_name":"stdout","time":1706.211143708,"data":"[28:07] jev_contrastive | config {'confounders': True, 'jev': True, 'contrastive': True} | train=53531 | anchor found: HumAID train 37.6%, confounder test 100.0%\n"}
+,{"stream_name":"stdout","time":1720.289276025,"data":"[28:21] plus_confounders | epoch 1/3 step 700/5736 loss cat 0.644 | 4.0 it/s | ETA 20.9 min\n"}
+,{"stream_name":"stdout","time":1734.103521514,"data":"[28:35] jev_contrastive | epoch 1/3 step 100/5736 loss cat 2.195 real 0.600 con 3.909 | 3.9 it/s | ETA 24.2 min\n"}
+,{"stream_name":"stdout","time":1745.897995681,"data":"[28:47] plus_confounders | epoch 1/3 step 800/5736 loss cat 0.629 | 4.0 it/s | ETA 20.5 min\n"}
+,{"stream_name":"stdout","time":1759.507927169,"data":"[29:00] jev_contrastive | epoch 1/3 step 200/5736 loss cat 1.823 real 0.487 con 3.476 | 3.9 it/s | ETA 23.6 min\n"}
+,{"stream_name":"stdout","time":1771.283653148,"data":"[29:12] plus_confounders | epoch 1/3 step 900/5736 loss cat 0.604 | 4.0 it/s | ETA 20.2 min\n"}
+,{"stream_name":"stdout","time":1784.883644015,"data":"[29:26] jev_contrastive | epoch 1/3 step 300/5736 loss cat 1.266 real 0.376 con 3.419 | 3.9 it/s | ETA 23.1 min\n"}
+,{"stream_name":"stdout","time":1797.120638182,"data":"[29:38] plus_confounders | epoch 1/3 step 1000/5736 loss cat 0.609 | 4.0 it/s | ETA 19.8 min\n"}
+,{"stream_name":"stdout","time":1810.530176621,"data":"[29:51] jev_contrastive | epoch 1/3 step 400/5736 loss cat 0.920 real 0.295 con 3.370 | 3.9 it/s | ETA 22.7 min\n"}
+,{"stream_name":"stdout","time":1822.785200178,"data":"[30:04] plus_confounders | epoch 1/3 step 1100/5736 loss cat 0.618 | 4.0 it/s | ETA 19.4 min\n"}
+,{"stream_name":"stdout","time":1836.078540437,"data":"[30:17] jev_contrastive | epoch 1/3 step 500/5736 loss cat 0.804 real 0.276 con 3.341 | 3.9 it/s | ETA 22.3 min\n"}
+,{"stream_name":"stdout","time":1848.490273578,"data":"[30:29] plus_confounders | epoch 1/3 step 1200/5736 loss cat 0.590 | 4.0 it/s | ETA 19.1 min\n"}
+,{"stream_name":"stdout","time":1861.844212416,"data":"[30:43] jev_contrastive | epoch 1/3 step 600/5736 loss cat 0.787 real 0.259 con 3.328 | 3.9 it/s | ETA 21.9 min\n"}
+,{"stream_name":"stdout","time":1874.013327522,"data":"[30:55] plus_confounders | epoch 1/3 step 1300/5736 loss cat 0.570 | 4.0 it/s | ETA 18.6 min\n"}
+,{"stream_name":"stdout","time":1887.465121456,"data":"[31:08] jev_contrastive | epoch 1/3 step 700/5736 loss cat 0.711 real 0.250 con 3.323 | 3.9 it/s | ETA 21.5 min\n"}
+,{"stream_name":"stdout","time":1899.993885567,"data":"[31:21] plus_confounders | epoch 1/3 step 1400/5736 loss cat 0.574 | 4.0 it/s | ETA 18.3 min\n"}
+,{"stream_name":"stdout","time":1913.304359034,"data":"[31:34] jev_contrastive | epoch 1/3 step 800/5736 loss cat 0.662 real 0.221 con 3.296 | 3.9 it/s | ETA 21.1 min\n"}
+,{"stream_name":"stdout","time":1925.588935129,"data":"[31:46] plus_confounders | epoch 1/3 step 1500/5736 loss cat 0.568 | 4.0 it/s | ETA 17.9 min\n"}
+,{"stream_name":"stdout","time":1939.319912487,"data":"[32:00] jev_contrastive | epoch 1/3 step 900/5736 loss cat 0.658 real 0.231 con 3.304 | 3.9 it/s | ETA 20.7 min\n"}
+,{"stream_name":"stdout","time":1951.109130798,"data":"[32:12] plus_confounders | epoch 1/3 step 1600/5736 loss cat 0.574 | 4.0 it/s | ETA 17.4 min\n"}
+,{"stream_name":"stdout","time":1965.172436972,"data":"[32:26] jev_contrastive | epoch 1/3 step 1000/5736 loss cat 0.635 real 0.222 con 3.297 | 3.9 it/s | ETA 20.3 min\n"}
+,{"stream_name":"stdout","time":1977.299604713,"data":"[32:38] plus_confounders | epoch 1/3 step 1700/5736 loss cat 0.565 | 3.9 it/s | ETA 17.1 min\n"}
+,{"stream_name":"stdout","time":1991.608242502,"data":"[32:52] jev_contrastive | epoch 1/3 step 1100/5736 loss cat 0.615 real 0.223 con 3.297 | 3.9 it/s | ETA 19.9 min\n"}
+,{"stream_name":"stdout","time":2002.928600134,"data":"[33:04] plus_confounders | epoch 1/3 step 1800/5736 loss cat 0.564 | 3.9 it/s | ETA 16.6 min\n"}
+,{"stream_name":"stdout","time":2018.24596445,"data":"[33:19] jev_contrastive | epoch 1/3 step 1200/5736 loss cat 0.594 real 0.208 con 3.293 | 3.9 it/s | ETA 19.5 min\n"}
+,{"stream_name":"stdout","time":2028.537576702,"data":"[33:29] plus_confounders | epoch 1/3 step 1900/5736 loss cat 0.558 | 3.9 it/s | ETA 16.2 min\n"}
+,{"stream_name":"stdout","time":2045.097120879,"data":"[33:46] jev_contrastive | epoch 1/3 step 1300/5736 loss cat 0.589 real 0.212 con 3.293 | 3.9 it/s | ETA 19.2 min\n"}
+,{"stream_name":"stdout","time":2050.069308959,"data":"[33:51] plus_confounders | epoch 1 DEV {'accuracy': 0.7674, 'macro_f1': 0.7502, 'weighted_f1': 0.7651} | CONFOUNDER real_kept 1.0 lookalike_rejected 0.9\n"}
+,{"stream_name":"stdout","time":2071.911973857,"data":"[34:13] jev_contrastive | epoch 1/3 step 1400/5736 loss cat 0.601 real 0.209 con 3.276 | 3.9 it/s | ETA 18.8 min\n"}
+,{"stream_name":"stdout","time":2073.363464255,"data":"[34:14] plus_confounders | epoch 2/3 step 2000/5736 loss cat 0.357 | 3.8 it/s | ETA 16.4 min\n"}
+,{"stream_name":"stdout","time":2098.505079683,"data":"[34:39] jev_contrastive | epoch 1/3 step 1500/5736 loss cat 0.595 real 0.192 con 3.268 | 3.8 it/s | ETA 18.4 min\n"}
+,{"stream_name":"stdout","time":2099.124985894,"data":"[34:40] plus_confounders | epoch 2/3 step 2100/5736 loss cat 0.403 | 3.8 it/s | ETA 16.0 min\n"}
+,{"stream_name":"stdout","time":2124.615869289,"data":"[35:05] plus_confounders | epoch 2/3 step 2200/5736 loss cat 0.392 | 3.8 it/s | ETA 15.5 min\n"}
+,{"stream_name":"stdout","time":2124.743687109,"data":"[35:06] jev_contrastive | epoch 1/3 step 1600/5736 loss cat 0.570 real 0.207 con 3.273 | 3.8 it/s | ETA 17.9 min\n"}
+,{"stream_name":"stdout","time":2150.331889762,"data":"[35:31] plus_confounders | epoch 2/3 step 2300/5736 loss cat 0.407 | 3.8 it/s | ETA 15.0 min\n"}
+,{"stream_name":"stdout","time":2151.163967589,"data":"[35:32] jev_contrastive | epoch 1/3 step 1700/5736 loss cat 0.575 real 0.203 con 3.282 | 3.8 it/s | ETA 17.5 min\n"}
+,{"stream_name":"stdout","time":2175.94658422,"data":"[35:57] plus_confounders | epoch 2/3 step 2400/5736 loss cat 0.379 | 3.8 it/s | ETA 14.6 min\n"}
+,{"stream_name":"stdout","time":2177.149356129,"data":"[35:58] jev_contrastive | epoch 1/3 step 1800/5736 loss cat 0.627 real 0.205 con 3.280 | 3.8 it/s | ETA 17.1 min\n"}
+,{"stream_name":"stdout","time":2201.363778935,"data":"[36:22] plus_confounders | epoch 2/3 step 2500/5736 loss cat 0.404 | 3.8 it/s | ETA 14.1 min\n"}
+,{"stream_name":"stdout","time":2203.313006211,"data":"[36:24] jev_contrastive | epoch 1/3 step 1900/5736 loss cat 0.567 real 0.212 con 3.285 | 3.8 it/s | ETA 16.7 min\n"}
+,{"stream_name":"stdout","time":2225.208797632,"data":"[36:46] jev_contrastive | epoch 1 DEV {'accuracy': 0.7525, 'macro_f1': 0.7306, 'weighted_f1': 0.7532} | CONFOUNDER real_kept 0.933 lookalike_rejected 0.94\n"}
+,{"stream_name":"stdout","time":2226.823860636,"data":"[36:48] plus_confounders | epoch 2/3 step 2600/5736 loss cat 0.415 | 3.8 it/s | ETA 13.7 min\n"}
+,{"stream_name":"stdout","time":2249.200022179,"data":"[37:10] jev_contrastive | epoch 2/3 step 2000/5736 loss cat 0.388 real 0.114 con 2.825 | 3.7 it/s | ETA 16.8 min\n"}
+,{"stream_name":"stdout","time":2252.351862354,"data":"[37:13] plus_confounders | epoch 2/3 step 2700/5736 loss cat 0.414 | 3.8 it/s | ETA 13.2 min\n"}
+,{"stream_name":"stdout","time":2275.371395023,"data":"[37:36] jev_contrastive | epoch 2/3 step 2100/5736 loss cat 0.452 real 0.153 con 3.235 | 3.7 it/s | ETA 16.4 min\n"}
+,{"stream_name":"stdout","time":2277.853070248,"data":"[37:39] plus_confounders | epoch 2/3 step 2800/5736 loss cat 0.406 | 3.8 it/s | ETA 12.8 min\n"}
+,{"stream_name":"stdout","time":2301.558577875,"data":"[38:02] jev_contrastive | epoch 2/3 step 2200/5736 loss cat 0.438 real 0.157 con 3.237 | 3.7 it/s | ETA 15.9 min\n"}
+,{"stream_name":"stdout","time":2303.408406949,"data":"[38:04] plus_confounders | epoch 2/3 step 2900/5736 loss cat 0.395 | 3.8 it/s | ETA 12.3 min\n"}
+,{"stream_name":"stdout","time":2327.585562348,"data":"[38:28] jev_contrastive | epoch 2/3 step 2300/5736 loss cat 0.449 real 0.143 con 3.221 | 3.7 it/s | ETA 15.4 min\n"}
+,{"stream_name":"stdout","time":2329.21640933,"data":"[38:30] plus_confounders | epoch 2/3 step 3000/5736 loss cat 0.394 | 3.8 it/s | ETA 11.9 min\n"}
+,{"stream_name":"stdout","time":2353.839146562,"data":"[38:55] jev_contrastive | epoch 2/3 step 2400/5736 loss cat 0.425 real 0.121 con 3.208 | 3.7 it/s | ETA 15.0 min\n"}
+,{"stream_name":"stdout","time":2354.740204433,"data":"[38:56] plus_confounders | epoch 2/3 step 3100/5736 loss cat 0.383 | 3.8 it/s | ETA 11.5 min\n"}
+,{"stream_name":"stdout","time":2379.968187385,"data":"[39:21] jev_contrastive | epoch 2/3 step 2500/5736 loss cat 0.453 real 0.131 con 3.207 | 3.7 it/s | ETA 14.5 min\n"}
+,{"stream_name":"stdout","time":2380.392925926,"data":"[39:21] plus_confounders | epoch 2/3 step 3200/5736 loss cat 0.390 | 3.8 it/s | ETA 11.0 min\n"}
+,{"stream_name":"stdout","time":2405.883230276,"data":"[39:47] plus_confounders | epoch 2/3 step 3300/5736 loss cat 0.394 | 3.8 it/s | ETA 10.6 min\n"}
+,{"stream_name":"stdout","time":2406.439109523,"data":"[39:47] jev_contrastive | epoch 2/3 step 2600/5736 loss cat 0.454 real 0.166 con 3.233 | 3.7 it/s | ETA 14.0 min\n"}
+,{"stream_name":"stdout","time":2431.271989562,"data":"[40:12] plus_confounders | epoch 2/3 step 3400/5736 loss cat 0.394 | 3.8 it/s | ETA 10.1 min\n"}
+,{"stream_name":"stdout","time":2432.61323498,"data":"[40:13] jev_contrastive | epoch 2/3 step 2700/5736 loss cat 0.458 real 0.138 con 3.219 | 3.7 it/s | ETA 13.6 min\n"}
+,{"stream_name":"stdout","time":2456.873810278,"data":"[40:38] plus_confounders | epoch 2/3 step 3500/5736 loss cat 0.397 | 3.8 it/s | ETA 9.7 min\n"}
+,{"stream_name":"stdout","time":2459.011970941,"data":"[40:40] jev_contrastive | epoch 2/3 step 2800/5736 loss cat 0.445 real 0.141 con 3.233 | 3.7 it/s | ETA 13.1 min\n"}
+,{"stream_name":"stdout","time":2482.293330354,"data":"[41:03] plus_confounders | epoch 2/3 step 3600/5736 loss cat 0.416 | 3.8 it/s | ETA 9.3 min\n"}
+,{"stream_name":"stdout","time":2485.444992077,"data":"[41:06] jev_contrastive | epoch 2/3 step 2900/5736 loss cat 0.451 real 0.143 con 3.220 | 3.7 it/s | ETA 12.7 min\n"}
+,{"stream_name":"stdout","time":2507.933528985,"data":"[41:29] plus_confounders | epoch 2/3 step 3700/5736 loss cat 0.391 | 3.8 it/s | ETA 8.8 min\n"}
+,{"stream_name":"stdout","time":2511.821597546,"data":"[41:33] jev_contrastive | epoch 2/3 step 3000/5736 loss cat 0.419 real 0.145 con 3.219 | 3.7 it/s | ETA 12.2 min\n"}
+,{"stream_name":"stdout","time":2533.556452584,"data":"[41:54] plus_confounders | epoch 2/3 step 3800/5736 loss cat 0.383 | 3.8 it/s | ETA 8.4 min\n"}
+,{"stream_name":"stdout","time":2538.232979889,"data":"[41:59] jev_contrastive | epoch 2/3 step 3100/5736 loss cat 0.413 real 0.118 con 3.203 | 3.7 it/s | ETA 11.8 min\n"}
+,{"stream_name":"stdout","time":2558.003340751,"data":"[42:19] plus_confounders | epoch 2 DEV {'accuracy': 0.7738, 'macro_f1': 0.7545, 'weighted_f1': 0.7723} | CONFOUNDER real_kept 0.967 lookalike_rejected 0.8\n"}
+,{"stream_name":"stdout","time":2564.117686492,"data":"[42:25] jev_contrastive | epoch 2/3 step 3200/5736 loss cat 0.449 real 0.153 con 3.214 | 3.7 it/s | ETA 11.3 min\n"}
+,{"stream_name":"stdout","time":2578.342201522,"data":"[42:39] plus_confounders | epoch 3/3 step 3900/5736 loss cat 0.139 | 3.8 it/s | ETA 8.1 min\n"}
+,{"stream_name":"stdout","time":2590.551184537,"data":"[42:51] jev_contrastive | epoch 2/3 step 3300/5736 loss cat 0.427 real 0.139 con 3.213 | 3.7 it/s | ETA 10.9 min\n"}
+,{"stream_name":"stdout","time":2603.875467264,"data":"[43:05] plus_confounders | epoch 3/3 step 4000/5736 loss cat 0.217 | 3.8 it/s | ETA 7.7 min\n"}
+,{"stream_name":"stdout","time":2617.238197479,"data":"[43:18] jev_contrastive | epoch 2/3 step 3400/5736 loss cat 0.440 real 0.117 con 3.205 | 3.7 it/s | ETA 10.4 min\n"}
+,{"stream_name":"stdout","time":2629.457239058,"data":"[43:30] plus_confounders | epoch 3/3 step 4100/5736 loss cat 0.173 | 3.8 it/s | ETA 7.2 min\n"}
+,{"stream_name":"stdout","time":2643.663113254,"data":"[43:45] jev_contrastive | epoch 2/3 step 3500/5736 loss cat 0.431 real 0.134 con 3.215 | 3.7 it/s | ETA 10.0 min\n"}
+,{"stream_name":"stdout","time":2654.857790659,"data":"[43:56] plus_confounders | epoch 3/3 step 4200/5736 loss cat 0.185 | 3.8 it/s | ETA 6.8 min\n"}
+,{"stream_name":"stdout","time":2670.195273676,"data":"[44:11] jev_contrastive | epoch 2/3 step 3600/5736 loss cat 0.426 real 0.138 con 3.214 | 3.7 it/s | ETA 9.5 min\n"}
+,{"stream_name":"stdout","time":2680.219827348,"data":"[44:21] plus_confounders | epoch 3/3 step 4300/5736 loss cat 0.181 | 3.8 it/s | ETA 6.3 min\n"}
+,{"stream_name":"stdout","time":2696.398286498,"data":"[44:37] jev_contrastive | epoch 2/3 step 3700/5736 loss cat 0.423 real 0.137 con 3.217 | 3.7 it/s | ETA 9.1 min\n"}
+,{"stream_name":"stdout","time":2705.735668469,"data":"[44:47] plus_confounders | epoch 3/3 step 4400/5736 loss cat 0.157 | 3.8 it/s | ETA 5.9 min\n"}
+,{"stream_name":"stdout","time":2722.852757031,"data":"[45:04] jev_contrastive | epoch 2/3 step 3800/5736 loss cat 0.441 real 0.134 con 3.213 | 3.7 it/s | ETA 8.6 min\n"}
+,{"stream_name":"stdout","time":2731.317808026,"data":"[45:12] plus_confounders | epoch 3/3 step 4500/5736 loss cat 0.165 | 3.8 it/s | ETA 5.4 min\n"}
+,{"stream_name":"stdout","time":2747.777335395,"data":"[45:29] jev_contrastive | epoch 2 DEV {'accuracy': 0.7715, 'macro_f1': 0.7539, 'weighted_f1': 0.7678} | CONFOUNDER real_kept 0.933 lookalike_rejected 0.9\n"}
+,{"stream_name":"stdout","time":2756.764016789,"data":"[45:38] plus_confounders | epoch 3/3 step 4600/5736 loss cat 0.159 | 3.8 it/s | ETA 5.0 min\n"}
+,{"stream_name":"stdout","time":2768.390239658,"data":"[45:49] jev_contrastive | epoch 3/3 step 3900/5736 loss cat 0.174 real 0.047 con 2.367 | 3.7 it/s | ETA 8.3 min\n"}
+,{"stream_name":"stdout","time":2782.815659787,"data":"[46:04] plus_confounders | epoch 3/3 step 4700/5736 loss cat 0.172 | 3.8 it/s | ETA 4.5 min\n"}
+,{"stream_name":"stdout","time":2795.066678787,"data":"[46:16] jev_contrastive | epoch 3/3 step 4000/5736 loss cat 0.230 real 0.051 con 3.122 | 3.7 it/s | ETA 7.9 min\n"}
+,{"stream_name":"stdout","time":2808.241251472,"data":"[46:29] plus_confounders | epoch 3/3 step 4800/5736 loss cat 0.142 | 3.8 it/s | ETA 4.1 min\n"}
+,{"stream_name":"stdout","time":2821.3202924,"data":"[46:42] jev_contrastive | epoch 3/3 step 4100/5736 loss cat 0.255 real 0.060 con 3.112 | 3.7 it/s | ETA 7.4 min\n"}
+,{"stream_name":"stdout","time":2834.129193732,"data":"[46:55] plus_confounders | epoch 3/3 step 4900/5736 loss cat 0.155 | 3.8 it/s | ETA 3.7 min\n"}
+,{"stream_name":"stdout","time":2847.290285242,"data":"[47:08] jev_contrastive | epoch 3/3 step 4200/5736 loss cat 0.229 real 0.032 con 3.099 | 3.7 it/s | ETA 6.9 min\n"}
+,{"stream_name":"stdout","time":2859.74972951,"data":"[47:21] plus_confounders | epoch 3/3 step 5000/5736 loss cat 0.158 | 3.8 it/s | ETA 3.2 min\n"}
+,{"stream_name":"stdout","time":2873.842541337,"data":"[47:35] jev_contrastive | epoch 3/3 step 4300/5736 loss cat 0.241 real 0.047 con 3.092 | 3.7 it/s | ETA 6.5 min\n"}
+,{"stream_name":"stdout","time":2885.346056604,"data":"[47:46] plus_confounders | epoch 3/3 step 5100/5736 loss cat 0.164 | 3.8 it/s | ETA 2.8 min\n"}
+,{"stream_name":"stdout","time":2900.345723063,"data":"[48:01] jev_contrastive | epoch 3/3 step 4400/5736 loss cat 0.224 real 0.039 con 3.083 | 3.7 it/s | ETA 6.0 min\n"}
+,{"stream_name":"stdout","time":2910.775530374,"data":"[48:12] plus_confounders | epoch 3/3 step 5200/5736 loss cat 0.181 | 3.8 it/s | ETA 2.3 min\n"}
+,{"stream_name":"stdout","time":2926.798792108,"data":"[48:28] jev_contrastive | epoch 3/3 step 4500/5736 loss cat 0.229 real 0.053 con 3.106 | 3.7 it/s | ETA 5.6 min\n"}
+,{"stream_name":"stdout","time":2936.593821839,"data":"[48:37] plus_confounders | epoch 3/3 step 5300/5736 loss cat 0.163 | 3.8 it/s | ETA 1.9 min\n"}
+,{"stream_name":"stdout","time":2952.912151436,"data":"[48:54] jev_contrastive | epoch 3/3 step 4600/5736 loss cat 0.229 real 0.040 con 3.077 | 3.7 it/s | ETA 5.1 min\n"}
+,{"stream_name":"stdout","time":2962.143026626,"data":"[49:03] plus_confounders | epoch 3/3 step 5400/5736 loss cat 0.175 | 3.8 it/s | ETA 1.5 min\n"}
+,{"stream_name":"stdout","time":2978.929740908,"data":"[49:20] jev_contrastive | epoch 3/3 step 4700/5736 loss cat 0.232 real 0.037 con 3.091 | 3.7 it/s | ETA 4.7 min\n"}
+,{"stream_name":"stdout","time":2987.856507438,"data":"[49:29] plus_confounders | epoch 3/3 step 5500/5736 loss cat 0.157 | 3.8 it/s | ETA 1.0 min\n"}
+,{"stream_name":"stdout","time":3005.065766153,"data":"[49:46] jev_contrastive | epoch 3/3 step 4800/5736 loss cat 0.254 real 0.056 con 3.105 | 3.7 it/s | ETA 4.2 min\n"}
+,{"stream_name":"stdout","time":3013.064566257,"data":"[49:54] plus_confounders | epoch 3/3 step 5600/5736 loss cat 0.150 | 3.8 it/s | ETA 0.6 min\n"}
+,{"stream_name":"stdout","time":3031.686069311,"data":"[50:13] jev_contrastive | epoch 3/3 step 4900/5736 loss cat 0.225 real 0.038 con 3.083 | 3.7 it/s | ETA 3.8 min\n"}
+,{"stream_name":"stdout","time":3038.652973146,"data":"[50:20] plus_confounders | epoch 3/3 step 5700/5736 loss cat 0.144 | 3.8 it/s | ETA 0.2 min\n"}
+,{"stream_name":"stdout","time":3057.592019761,"data":"[50:38] jev_contrastive | epoch 3/3 step 5000/5736 loss cat 0.247 real 0.034 con 3.079 | 3.7 it/s | ETA 3.3 min\n"}
+,{"stream_name":"stdout","time":3066.274380279,"data":"[50:47] plus_confounders | epoch 3 DEV {'accuracy': 0.7698, 'macro_f1': 0.7529, 'weighted_f1': 0.7685} | CONFOUNDER real_kept 0.967 lookalike_rejected 0.84\n"}
+,{"stream_name":"stdout","time":3083.701460995,"data":"[51:05] jev_contrastive | epoch 3/3 step 5100/5736 loss cat 0.223 real 0.030 con 3.070 | 3.7 it/s | ETA 2.9 min\n"}
+,{"stream_name":"stdout","time":3100.552201641,"data":"[51:21] plus_confounders | HUMAID TEST {'accuracy': 0.7816, 'macro_f1': 0.7671, 'weighted_f1': 0.7795, 'macro_f1_ungated': 0.7671}\n"}
+,{"stream_name":"stdout","time":3100.5534913,"data":"[51:21] plus_confounders | CONFOUNDER TEST {'n_real': 30, 'n_lookalike': 50, 'real_kept': 0.967, 'real_exact_category': 0.767, 'lookalike_rejected': 0.8, 'balanced': 0.883, 'rejected_routine': 0.731, 'rejected_figurative': 0.833, 'rejected_past_or_fiction': 0.889, 'rejected_drill': 0.889}\n"}
+,{"stream_name":"stdout","time":3100.623368478,"data":"[51:22] plus_confounders | finished\n"}
+,{"stream_name":"stdout","time":3110.092435723,"data":"[51:31] jev_contrastive | epoch 3/3 step 5200/5736 loss cat 0.227 real 0.059 con 3.115 | 3.7 it/s | ETA 2.4 min\n"}
+,{"stream_name":"stdout","time":3136.426723552,"data":"[51:57] jev_contrastive | epoch 3/3 step 5300/5736 loss cat 0.228 real 0.046 con 3.095 | 3.7 it/s | ETA 2.0 min\n"}
+,{"stream_name":"stdout","time":3162.579020376,"data":"[52:23] jev_contrastive | epoch 3/3 step 5400/5736 loss cat 0.211 real 0.032 con 3.089 | 3.7 it/s | ETA 1.5 min\n"}
+,{"stream_name":"stdout","time":3188.64457946,"data":"[52:50] jev_contrastive | epoch 3/3 step 5500/5736 loss cat 0.218 real 0.046 con 3.111 | 3.7 it/s | ETA 1.1 min\n"}
+,{"stream_name":"stdout","time":3214.837570299,"data":"[53:16] jev_contrastive | epoch 3/3 step 5600/5736 loss cat 0.218 real 0.043 con 3.080 | 3.7 it/s | ETA 0.6 min\n"}
+,{"stream_name":"stdout","time":3241.20868885,"data":"[53:42] jev_contrastive | epoch 3/3 step 5700/5736 loss cat 0.216 real 0.048 con 3.095 | 3.7 it/s | ETA 0.2 min\n"}
+,{"stream_name":"stdout","time":3269.730053866,"data":"[54:11] jev_contrastive | epoch 3 DEV {'accuracy': 0.7706, 'macro_f1': 0.7513, 'weighted_f1': 0.7703} | CONFOUNDER real_kept 0.967 lookalike_rejected 0.86\n"}
+,{"stream_name":"stdout","time":3305.062125021,"data":"[54:46] jev_contrastive | HUMAID TEST {'accuracy': 0.7737, 'macro_f1': 0.7555, 'weighted_f1': 0.7704, 'macro_f1_ungated': 0.7536}\n"}
+,{"stream_name":"stdout","time":3305.063140886,"data":"[54:46] jev_contrastive | CONFOUNDER TEST {'n_real': 30, 'n_lookalike': 50, 'real_kept': 0.933, 'real_exact_category': 0.733, 'lookalike_rejected': 0.9, 'balanced': 0.917, 'rejected_routine': 0.846, 'rejected_figurative': 1.0, 'rejected_past_or_fiction': 1.0, 'rejected_drill': 0.889}\n"}
+,{"stream_name":"stdout","time":3305.120845515,"data":"[54:46] jev_contrastive | finished\n"}
+,{"stream_name":"stdout","time":3306.857664461,"data":"[54:48] all queues finished\n"}
+,{"stream_name":"stdout","time":3306.921556373,"data":"                  humaid_acc  humaid_macro_f1  real_kept  lookalike_rejected  balanced  routine  figurative  past_or_fiction  drill\n"}
+,{"stream_name":"stdout","time":3306.921597733,"data":"baseline              0.7818           0.7598      1.000                 0.3     0.650    0.115       0.667            0.556  0.333\n"}
+,{"stream_name":"stdout","time":3306.921605236,"data":"plus_confounders      0.7816           0.7671      0.967                 0.8     0.883    0.731       0.833            0.889  0.889\n"}
+,{"stream_name":"stdout","time":3306.921621926,"data":"jev                   0.7708           0.7588      0.967                 0.9     0.933    0.885       0.667            1.000  1.000\n"}
+,{"stream_name":"stdout","time":3306.921628631,"data":"jev_contrastive       0.7737           0.7555      0.933                 0.9     0.917    0.846       1.000            1.000  0.889\n"}
+,{"stream_name":"stdout","time":3306.970267354,"data":"[54:48] done\n"}
+,{"stream_name":"stderr","time":3310.090536737,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3310.090581673,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3310.26861475,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3310.268641551,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3311.05741716,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":3311.16836124,"data":"[NbConvertApp] Writing 94507 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":3313.730598065,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3314.289280081,"data":"[NbConvertApp] Writing 399769 bytes to __results__.html\n"}
+]

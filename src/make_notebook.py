@@ -3,6 +3,7 @@
 Usage: python src/make_notebook.py notebooks/01_eda_baseline.py notebooks/kaggle_01/humaid-01-eda-baseline.ipynb
 """
 import json
+import os
 import sys
 
 
@@ -20,8 +21,13 @@ def convert(src_path, dst_path):
             cells.append({"cell_type": "code", "metadata": {}, "source": text,
                           "execution_count": None, "outputs": []})
 
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     for line in open(src_path, encoding="utf-8").read().split("\n"):
-        if line.startswith("# %%"):
+        if line.startswith("# %embed "):
+            # "# %embed NAME path" becomes NAME = "<file contents>", so the notebook is self-contained
+            _, _, name, path = line.split()
+            buf.append(f"{name} = {open(os.path.join(root, path), encoding='utf-8-sig').read()!r}")
+        elif line.startswith("# %%"):
             flush()
             kind = "markdown" if "[markdown]" in line else "code"
             buf = []

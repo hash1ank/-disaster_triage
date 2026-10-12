@@ -1,0 +1,81 @@
+id,anchor_entity,reality,label,text,pred,p_real
+C04-1,flyover,real_disaster,infrastructure_and_utility_damage,"Part of the flyover has come down after the earthquake, cars trapped underneath, need cranes urgently",other_relevant_information,0.98
+C04-2,flyover,real_disaster,infrastructure_and_utility_damage,"Flyover pillar is tilting after flood water eroded the base, traffic police have sealed it",infrastructure_and_utility_damage,0.982
+C04-3,flyover,real_disaster,injured_or_dead_people,Two bikers died when the flyover slab fell during the cyclone last night,injured_or_dead_people,0.999
+C04-4,flyover,routine,not_humanitarian,Flyover shut this weekend for expansion joint replacement,not_humanitarian,0.325
+C04-5,flyover,routine,not_humanitarian,"New flyover inauguration tomorrow by the CM, traffic diversions in place",other_relevant_information,0.587
+C04-6,flyover,routine,not_humanitarian,Demolition of the old flyover starts Friday to make way for the metro line,other_relevant_information,0.779
+C04-7,flyover,past_or_fiction,not_humanitarian,That scene in the movie where the flyover collapses looked so fake,not_humanitarian,0.108
+C04-8,flyover,drill,not_humanitarian,"Fire dept running a rescue drill under the flyover this morning, dont panic if you see smoke",rescue_volunteering_or_donation_effort,0.998
+C07-1,airport runway,real_disaster,infrastructure_and_utility_damage,"Runway is under water, airport shut till further notice, all flights cancelled #ChennaiFloods",other_relevant_information,0.984
+C07-2,airport runway,real_disaster,infrastructure_and_utility_damage,"Cracks on the runway after the earthquake, relief flights being diverted",other_relevant_information,0.984
+C07-3,airport runway,real_disaster,infrastructure_and_utility_damage,"Debris all over the runway after the hurricane, no relief planes can land",other_relevant_information,0.978
+C07-4,airport runway,routine,not_humanitarian,Runway closed 6 hours daily for recarpeting work until March,other_relevant_information,0.875
+C07-5,airport runway,routine,not_humanitarian,"Second runway becomes operational from tomorrow, finally fewer delays",other_relevant_information,0.795
+C07-6,airport runway,figurative,not_humanitarian,"She owned that runway at fashion week, absolute fire",not_humanitarian,0.069
+C07-7,airport runway,past_or_fiction,not_humanitarian,Remember when the runway flooded in 2015? Airport has built new drains since then,other_relevant_information,0.804
+C07-8,airport runway,drill,not_humanitarian,"Full scale emergency drill on the runway today, fire tenders and ambulances are part of the exercise",rescue_volunteering_or_donation_effort,0.959
+C08-1,tunnel,real_disaster,infrastructure_and_utility_damage,"Tunnel caved in after the landslide, workers trapped inside, rescue is on",rescue_volunteering_or_donation_effort,0.996
+C08-2,tunnel,real_disaster,infrastructure_and_utility_damage,"Tunnel flooded completely, two cars submerged, divers called in",infrastructure_and_utility_damage,0.982
+C08-3,tunnel,real_disaster,caution_and_advice,"Smoke filling the tunnel after wildfire reached the entrance, traffic stopped both sides",other_relevant_information,0.99
+C08-4,tunnel,routine,not_humanitarian,Tunnel closed tonight for ventilation fan maintenance,other_relevant_information,0.67
+C08-5,tunnel,routine,not_humanitarian,"Breakthrough achieved in the new rail tunnel, engineers celebrating",other_relevant_information,0.581
+C08-6,tunnel,figurative,not_humanitarian,Finally seeing light at the end of the tunnel with this thesis,not_humanitarian,0.089
+C08-7,tunnel,past_or_fiction,not_humanitarian,The tunnel collapse in that Netflix series was so tense,not_humanitarian,0.567
+C08-8,tunnel,drill,not_humanitarian,"Mock rescue exercise inside the tunnel today, traffic will be held for 30 mins",rescue_volunteering_or_donation_effort,0.987
+C10-1,school building,real_disaster,infrastructure_and_utility_damage,"School building roof caved in during the quake, thank god it was a Sunday",infrastructure_and_utility_damage,0.994
+C10-2,school building,real_disaster,infrastructure_and_utility_damage,"Our school is under water, books and benches all gone #floods",infrastructure_and_utility_damage,0.977
+C10-3,school building,real_disaster,infrastructure_and_utility_damage,"School wall fell on the road after the cyclone, power pole also down",infrastructure_and_utility_damage,0.999
+C10-4,school building,routine,not_humanitarian,"School building closed for summer renovation, new classrooms being added",other_relevant_information,0.64
+C10-5,school building,routine,not_humanitarian,"Old school block is being pulled down, new one will come up by next year",not_humanitarian,0.385
+C10-6,school building,figurative,not_humanitarian,Results day and the whole school is in ruins emotionally,not_humanitarian,0.287
+C10-7,school building,past_or_fiction,not_humanitarian,Our history teacher told us how the school was rebuilt after the 2001 earthquake,other_relevant_information,0.819
+C10-8,school building,drill,not_humanitarian,"Earthquake drill at school today, kids hid under desks and thought it was the best thing ever",not_humanitarian,0.194
+C14-1,embankment,real_disaster,infrastructure_and_utility_damage,"River embankment breached at two places, water entering villages, people on rooftops",infrastructure_and_utility_damage,0.992
+C14-2,embankment,real_disaster,infrastructure_and_utility_damage,"Embankment washed away overnight, 500 acres of crops under water",infrastructure_and_utility_damage,0.995
+C14-3,embankment,real_disaster,requests_or_urgent_needs,"Embankment leaking near our village, need sandbags and volunteers right now",requests_or_urgent_needs,0.999
+C14-4,embankment,routine,not_humanitarian,"Embankment strengthening work before monsoon is going on, heavy vehicles not allowed",other_relevant_information,0.897
+C14-5,embankment,routine,not_humanitarian,Walking track on the river embankment closed for landscaping,not_humanitarian,0.387
+C14-6,embankment,routine,not_humanitarian,Govt sanctions funds for raising the embankment height by 2 metres,rescue_volunteering_or_donation_effort,0.98
+C14-7,embankment,past_or_fiction,not_humanitarian,Grandpa still talks about the embankment breach of 1987,not_humanitarian,0.324
+C14-8,embankment,drill,not_humanitarian,Flood preparedness drill on the embankment today with NDRF boats,other_relevant_information,0.985
+C17-1,substation,real_disaster,infrastructure_and_utility_damage,"Substation flooded, power supply to half the city cut off, no timeline for restoration",infrastructure_and_utility_damage,0.998
+C17-2,substation,real_disaster,infrastructure_and_utility_damage,"Fire at the substation after lightning strike in the storm, hospitals on generators",other_relevant_information,0.982
+C17-3,substation,real_disaster,infrastructure_and_utility_damage,"Substation damaged in the quake, power out in 30 villages",infrastructure_and_utility_damage,1.0
+C17-4,substation,routine,not_humanitarian,Substation shutdown on Sunday 8am-2pm for annual maintenance,other_relevant_information,0.657
+C17-5,substation,routine,not_humanitarian,"New 220kV substation commissioned, should end low voltage complaints",other_relevant_information,0.944
+C17-6,substation,routine,not_humanitarian,"Substation upgrade work delayed again, contractor blames monsoon",other_relevant_information,0.91
+C17-7,substation,past_or_fiction,not_humanitarian,"The 2019 substation fire took a week to fix, hope they learned",other_relevant_information,0.779
+C17-8,substation,drill,not_humanitarian,Fire safety mock drill at the substation today,not_humanitarian,0.454
+C21-1,gas pipeline,real_disaster,displaced_people_and_evacuations,"Gas pipeline ruptured in the quake, fire spreading, area being evacuated",infrastructure_and_utility_damage,0.994
+C21-2,gas pipeline,real_disaster,caution_and_advice,"Strong gas smell after the flood shifted the pipeline, police clearing the street",other_relevant_information,0.943
+C21-3,gas pipeline,real_disaster,infrastructure_and_utility_damage,"Gas line exploded after the hurricane damaged it, several houses burnt",infrastructure_and_utility_damage,0.998
+C21-4,gas pipeline,routine,not_humanitarian,"Piped gas connection work in our society this week, digging near gate 2",other_relevant_information,0.889
+C21-5,gas pipeline,routine,not_humanitarian,"Gas pipeline pressure testing tonight, you may hear a hissing sound",other_relevant_information,0.74
+C21-6,gas pipeline,routine,not_humanitarian,Gas supply off for 3 hrs tomorrow for meter replacement,other_relevant_information,0.949
+C21-7,gas pipeline,past_or_fiction,not_humanitarian,The pipeline explosion scene in that film was insane,not_humanitarian,0.347
+C21-8,gas pipeline,drill,not_humanitarian,"Gas leak mock drill at the plant today, sirens are part of it",other_relevant_information,0.801
+C22-1,mobile tower,real_disaster,infrastructure_and_utility_damage,"Mobile tower fell in the cyclone, no network anywhere, cant reach family",infrastructure_and_utility_damage,0.999
+C22-2,mobile tower,real_disaster,infrastructure_and_utility_damage,"All towers down after the hurricane, we have no way to call for help",infrastructure_and_utility_damage,0.998
+C22-3,mobile tower,real_disaster,injured_or_dead_people,"Tower collapsed on a house during the storm, one person injured",injured_or_dead_people,0.996
+C22-4,mobile tower,routine,not_humanitarian,"New mobile tower coming up near the park, residents protesting",other_relevant_information,0.653
+C22-5,mobile tower,routine,not_humanitarian,"Tower being upgraded to 5G, network may drop for few hours",other_relevant_information,0.98
+C22-6,mobile tower,routine,not_humanitarian,"Old mobile tower dismantled today, finally",infrastructure_and_utility_damage,0.879
+C22-7,mobile tower,figurative,not_humanitarian,He is a tower of strength for this team,other_relevant_information,0.768
+C22-8,mobile tower,past_or_fiction,not_humanitarian,After the 2018 floods they put towers on wheels for emergencies,rescue_volunteering_or_donation_effort,0.972
+C28-1,shelter,real_disaster,requests_or_urgent_needs,"Shelter at the school is full, 300 people and only 2 toilets, need blankets and food",requests_or_urgent_needs,0.999
+C28-2,shelter,real_disaster,requests_or_urgent_needs,"Looking for a shelter that takes pets, we had to leave because of the fire",other_relevant_information,0.803
+C28-3,shelter,real_disaster,rescue_volunteering_or_donation_effort,"Relief shelter opened at the town hall for flood affected families, volunteers welcome",rescue_volunteering_or_donation_effort,1.0
+C28-4,shelter,routine,not_humanitarian,New bus shelter installed at our stop finally,other_relevant_information,0.563
+C28-5,shelter,routine,not_humanitarian,"Animal shelter adoption drive this Sunday, come meet the puppies",rescue_volunteering_or_donation_effort,0.942
+C28-6,shelter,routine,not_humanitarian,Night shelter for the homeless being renovated before winter,displaced_people_and_evacuations,0.996
+C28-7,shelter,figurative,not_humanitarian,Taking shelter from my responsibilities under this blanket,not_humanitarian,0.438
+C28-8,shelter,drill,not_humanitarian,Cyclone shelter mock drill held in coastal villages today,not_humanitarian,0.43
+C29-1,ambulance,real_disaster,requests_or_urgent_needs,"Ambulances cant reach us, road is flooded, my father needs dialysis, please help",requests_or_urgent_needs,0.998
+C29-2,ambulance,real_disaster,injured_or_dead_people,"Ambulances lined up outside the collapsed building, bringing out injured one by one",injured_or_dead_people,0.999
+C29-3,ambulance,real_disaster,requests_or_urgent_needs,"Need ambulance in ward 12, woman in labour and water is waist deep",requests_or_urgent_needs,0.998
+C29-4,ambulance,routine,not_humanitarian,New fleet of ambulances flagged off by the health minister today,rescue_volunteering_or_donation_effort,0.975
+C29-5,ambulance,routine,not_humanitarian,"Ambulance stuck in regular evening traffic again, people please give way",requests_or_urgent_needs,0.958
+C29-6,ambulance,figurative,not_humanitarian,"Someone call an ambulance for that bowler, he got destroyed",infrastructure_and_utility_damage,0.871
+C29-7,ambulance,past_or_fiction,not_humanitarian,The ambulance chase in that movie was the best part,not_humanitarian,0.35
+C29-8,ambulance,drill,not_humanitarian,"Ambulances at the stadium are for the emergency drill, relax",caution_and_advice,0.871
