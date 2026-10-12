@@ -28,7 +28,7 @@ with a purpose-built confounder set:
 
 | Part | What it is | Status |
 |---|---|---|
-| **Confounder set** | Sentences grouped by anchor entity (bridge, road, power lines, ...): for each entity, real disaster reports and look-alikes (routine construction or maintenance, figurative, past or fiction, drills). Split by entity, so test entities are never seen in training. Target 300–500 hand-verified sentences. | 240-sentence draft, unverified |
+| **Confounder set** | Sentences grouped by anchor entity (bridge, road, power lines, ...): for each entity, real disaster reports and look-alikes (routine construction or maintenance, figurative, past or fiction, drills). Split by entity, so test entities are never seen in training. | 400-sentence draft (50 entities), unverified |
 | **Stage 1: anchor entity** | Find the thing the tweet is about and mark it: `[E] bridge [/E] closed for repair work`. Currently a word list (`src/anchor_entities.py`). | First version run |
 | **Stage 2: JEV (Joint Entity–Event) model** | ModernBERT-base reads the sentence and the marked entity together and decides whether this is a real disaster. Optionally trained with a supervised contrastive loss, where sentences sharing an entity but not a reality are hard negatives. | First version run |
 | **Stage 3: classifier** | Assigns the humanitarian category from the same joint representation. If stage 2 says "not real", the output is forced to "not humanitarian". | First version run |
@@ -132,6 +132,9 @@ impractical on free GPUs.
 
 ### Pipeline, first run (notebook 04)
 
+This run used the first 240-sentence draft of the confounder set (batch 1). The set has
+since grown to 400 sentences, so these numbers will be replaced once it is verified.
+
 ModernBERT-base, 3 epochs, lr 5e-5, one seed, one component added per run. Each batch is
 28 HumAID tweets, plus (in the last three runs) 4 confounder training sentences about one
 anchor entity: 2 real and 2 look-alikes. The confounder test split has 30 real reports
@@ -177,11 +180,11 @@ style; the test split is 80 sentences; one seed per run.
 - [x] Baseline 1: TF-IDF + Logistic Regression, in-distribution and cross-disaster
 - [x] Baselines 2 and 3: BERT-base and Twitter-RoBERTa fine-tuning (GPU), official split
 - [ ] Cross-disaster evaluation for the transformer baselines
-- [x] Confounder set: 240-sentence draft organised by anchor entity
-- [ ] Confounder set: hand-verify the draft, then grow it to 300–500 sentences with new anchor entities
+- [x] Confounder set: 400-sentence draft, 50 anchor entities, split 25/25 by entity
+- [ ] Confounder set: blind verification by two team members, third resolves; then freeze the test split
 - [x] Backbone search: ModernBERT-base, DeBERTa-v3-base, ModernBERT-large, and their ensemble
 - [x] Pipeline, first version: anchor entity → JEV model → gated classifier, with a 4-run ablation ladder
-- [ ] Repeat the ladder with 3 seeds, to tell `plus_confounders` and `jev` apart
+- [ ] Rerun the ladder on the verified set with 3 seeds, to tell `plus_confounders` and `jev` apart
 - [ ] Improve the pipeline: anchor coverage on HumAID, contrastive loss focused on hard negatives
 - [ ] Add event masking
 - [ ] Ablations: remove one component at a time
@@ -205,7 +208,7 @@ src/
   make_notebook.py          converts a "# %%" .py file into a .ipynb
   anchor_entities.py        stage 1: word list that finds and marks the anchor entity
   kaggle_run.py             push → stream live logs → download outputs
-confounder_set/             draft confounder set and its labelling guide
+confounder_set/             draft confounder set, blind verification sheet, labelling guide
 outputs/kaggle_0*/          metrics, plots and logs pulled back from Kaggle
 data/                       local dataset copy (git-ignored)
 ```

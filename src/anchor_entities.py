@@ -14,18 +14,21 @@ TERMS = [
     r"power lines?", r"power poles?", r"power grid", r"power supply", r"power", r"electricity", r"electric poles?",
     r"wires?", r"transformers?", r"substations?", r"water supply", r"drinking water", r"water mains?", r"water",
     r"gas pipelines?", r"gas lines?", r"pipelines?", r"gas", r"mobile towers?", r"cell towers?", r"towers?",
-    r"network", r"internet", r"wifi", r"phone lines?", r"cell service",
+    r"network", r"internet", r"wifi", r"phone lines?", r"cell service", r"poles?", r"generators?", r"drainage",
+    r"drains?", r"sewers?", r"sewage", r"canals?", r"petrol pumps?", r"fuel stations?", r"gas stations?",
+    r"petrol", r"diesel", r"fuel",
     # transport
     r"bridges?", r"roads?", r"highways?", r"freeways?", r"interstate", r"nh-?\d+", r"streets?", r"flyovers?",
     r"overpass(?:es)?", r"railway tracks?", r"rail tracks?", r"tracks?", r"railways?", r"trains?", r"metro",
     r"subway", r"airports?", r"runways?", r"tunnels?", r"ports?", r"harbou?rs?", r"ferr(?:y|ies)",
+    r"jett(?:y|ies)", r"bus stands?", r"bus stops?", r"bus stations?", r"bus(?:es)?", r"boats?",
     # structures
     r"school buildings?", r"buildings?", r"houses?", r"homes?", r"schools?", r"hospitals?", r"walls?", r"roofs?",
     r"dams?", r"levees?", r"embankments?", r"church(?:es)?", r"mosques?", r"temples?", r"hotels?",
-    r"apartments?", r"malls?", r"factor(?:y|ies)", r"markets?", r"shops?",
+    r"apartments?", r"malls?", r"factor(?:y|ies)", r"markets?", r"shops?", r"basements?",
     # hazards and response
     r"wildfires?", r"fires?", r"smoke", r"sirens?", r"evacuat\w+", r"shelters?", r"ambulances?", r"rescue\w*",
-    r"ndrf",
+    r"ndrf", r"helicopters?", r"choppers?", r"camps?", r"blood", r"oxygen",
 ]
 # Longest alternative first, so "power lines" wins over "power" at the same position
 ANCHOR_RE = re.compile(r"\b(?:" + "|".join(sorted(TERMS, key=len, reverse=True)) + r")\b", re.IGNORECASE)
@@ -53,7 +56,7 @@ if __name__ == "__main__":
     import pandas as pd
 
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    conf = pd.read_csv(os.path.join(root, "confounder_set", "confounder_set_v1_draft.csv"))
+    conf = pd.read_csv(os.path.join(root, "confounder_set", "confounder_set_v2_draft.csv"))
     found = conf["text"].map(lambda t: find(t) is not None)
     print(f"confounder set: anchor found in {found.mean():.1%} of {len(conf)} sentences")
     for _, r in conf[~found].iterrows():

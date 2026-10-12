@@ -49,7 +49,7 @@ log(f"GPUs: {n_gpu} x {torch.cuda.get_device_name(0)} | DEBUG={DEBUG}")
 # ## 1. Project files used by the training script
 
 # %%
-# %embed CONFOUNDER_CSV confounder_set/confounder_set_v1_draft.csv
+# %embed CONFOUNDER_CSV confounder_set/confounder_set_v2_draft.csv
 # %embed ANCHOR_ENTITIES_PY src/anchor_entities.py
 for name, content in [("confounder.csv", CONFOUNDER_CSV), ("anchor_entities.py", ANCHOR_ENTITIES_PY)]:
     with open(name, "w", encoding="utf-8") as f:
