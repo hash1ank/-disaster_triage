@@ -3,17 +3,11 @@
 Sentences that share an **anchor entity** (bridge, road, power lines, shelter, ...) but
 differ in reality: some report a real disaster, others only look like one.
 
-**Status: v2 draft, unverified.** All 400 sentences were drafted by an AI assistant in
-tweet style. None has been checked by the team yet. Do not report results on this file
-as a benchmark until verification is done and the test split is frozen.
-
-## Files
-
-| File | What it is |
-|---|---|
-| `confounder_set_v2_draft.csv` | The set, with the draft `reality` and `label` for each sentence |
-| `verification_sheet_blind.csv` | The same 400 sentences, shuffled, with no labels. Verifiers fill this in |
-| `verification_key.csv` | Maps the blind sheet's `vid` back to the set's `id` |
+**Status: v2, reviewed, test split frozen on 20 October 2026.** All 400 sentences were
+drafted by an AI assistant in tweet style and then reviewed by the team, who accepted
+them as they are. Frozen file: `confounder_set_v2.csv`, SHA-256
+`60e0447b5ff2344df38019725b27f5e20ff9a1a5cdc678fb9e39cad6ad67d9e1`. No sentence in the
+test split is to be edited from here on; new sentences go into a v3 file.
 
 ## What is in the set
 
@@ -25,7 +19,7 @@ as a benchmark until verification is done and the test split is frozen.
 
 The set was drafted in two batches:
 
-- **Batch 1** (`C01` to `C30`, 240 sentences): the version used by notebook 04's first run.
+- **Batch 1** (`C01` to `C30`, 240 sentences): the version used by notebook 04.
 - **Batch 2** (`C31` to `C50`, 160 sentences): written to be harder. Cue words are
   deliberately crossed: some real reports contain routine words ("repair crews cant even
   reach the spot"), and some look-alikes contain disaster words ("any port in a storm",
@@ -48,34 +42,22 @@ reports it is one of: `infrastructure_and_utility_damage`, `requests_or_urgent_n
 `caution_and_advice`, `rescue_volunteering_or_donation_effort`,
 `sympathy_and_support`, `other_relevant_information`.
 
-## How to verify
+## Review record
 
-Two team members label every sentence independently; the third settles disagreements.
+- The team read the draft and agreed with almost all of it. No individual corrections
+  were recorded, so the file is unchanged from the draft.
+- The review was a single informal pass, not the blind double annotation planned
+  earlier, so **no inter-annotator agreement figure exists**. The report should say the
+  labels were drafted by an AI assistant and reviewed by the authors.
+- Model predictions on batch 1 (from notebook 04) existed at the time of the review.
 
-1. Each verifier makes their own copy of `verification_sheet_blind.csv`, named
-   `verification_<yourname>.csv`. Do not open the draft file or the key while labelling.
-2. For each row fill in:
-   - `your_reality`: one of the five types above.
-   - `your_label`: the HumAID category, only if you chose `real_disaster`.
-   - `natural`: `yes`, or `no` if the sentence is unnatural, unclear even to a person, or could fairly be read both ways.
-   - `notes`: anything worth recording, such as a better wording.
-3. When both copies are done, they are merged with the key and compared with the draft.
-   Agreement between the two verifiers is computed and goes in the report.
-4. The third member decides every row where the two disagree with each other or with
-   the draft. Rows marked unnatural by both are rewritten or dropped.
-5. The test split is then frozen. No test sentence is edited after that.
+Rules from here on:
 
-Rules that keep the test fair:
-
-- **Do not look at model predictions while verifying.** `outputs/kaggle_04/` contains
-  the predictions of four models on 80 of these sentences. Editing test sentences with
-  those in mind would tune the set to the models.
-- **Judge the sentence, not the cue word.** A sentence with "repair" in it can still be
-  a real report, and one with "flood" in it can still be a look-alike.
-- **A sentence with no deciding cue is a bad sentence.** "Road blocked near the station"
-  alone cannot be labelled; mark it `natural = no`.
-- **The category of a real report is a second-order judgement.** Several could fairly be
-  two categories (damage or urgent request). The main thing tested is real versus not.
+- **The test split is frozen.** Sentences are not edited or removed after seeing results.
+- **Judge sentences, not cue words.** A sentence with "repair" in it can still be a real
+  report, and one with "flood" in it can still be a look-alike.
+- **The category of a real report is a second-order judgement.** The main thing tested
+  is real versus not.
 
 ## Open questions for the faculty
 
@@ -87,6 +69,7 @@ Rules that keep the test fair:
 ## Known limitations
 
 - Written by one author, so the style is narrower than real tweets.
+- Reviewed informally; no inter-annotator agreement was measured.
 - English only, mixing Indian and international contexts.
 - Almost every sentence contains an anchor entity, while only about 39% of HumAID tweets do.
 

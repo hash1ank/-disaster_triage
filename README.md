@@ -28,7 +28,7 @@ with a purpose-built confounder set:
 
 | Part | What it is | Status |
 |---|---|---|
-| **Confounder set** | Sentences grouped by anchor entity (bridge, road, power lines, ...): for each entity, real disaster reports and look-alikes (routine construction or maintenance, figurative, past or fiction, drills). Split by entity, so test entities are never seen in training. | 400-sentence draft (50 entities), unverified |
+| **Confounder set** | Sentences grouped by anchor entity (bridge, road, power lines, ...): for each entity, real disaster reports and look-alikes (routine construction or maintenance, figurative, past or fiction, drills). Split by entity, so test entities are never seen in training. | 400 sentences (50 entities), reviewed by the team, test split frozen 20 Oct 2026 |
 | **Stage 1: anchor entity** | Find the thing the tweet is about and mark it: `[E] bridge [/E] closed for repair work`. Currently a word list (`src/anchor_entities.py`). | First version run |
 | **Stage 2: JEV (Joint Entity–Event) model** | ModernBERT-base reads the sentence and the marked entity together and decides whether this is a real disaster. Optionally trained with a supervised contrastive loss, where sentences sharing an entity but not a reality are hard negatives. | First version run |
 | **Stage 3: classifier** | Assigns the humanitarian category from the same joint representation. If stage 2 says "not real", the output is forced to "not humanitarian". | First version run |
@@ -181,7 +181,7 @@ style; the test split is 80 sentences; one seed per run.
 - [x] Baselines 2 and 3: BERT-base and Twitter-RoBERTa fine-tuning (GPU), official split
 - [ ] Cross-disaster evaluation for the transformer baselines
 - [x] Confounder set: 400-sentence draft, 50 anchor entities, split 25/25 by entity
-- [ ] Confounder set: blind verification by two team members, third resolves; then freeze the test split
+- [x] Confounder set: reviewed by the team (informal pass, no agreement figure) and test split frozen
 - [x] Backbone search: ModernBERT-base, DeBERTa-v3-base, ModernBERT-large, and their ensemble
 - [x] Pipeline, first version: anchor entity → JEV model → gated classifier, with a 4-run ablation ladder
 - [ ] Rerun the ladder on the verified set with 3 seeds, to tell `plus_confounders` and `jev` apart
@@ -203,12 +203,13 @@ notebooks/
   02_transformer_baselines.py
   03_backbone_search.py
   04_jev_pipeline.py
-  kaggle_01/ … kaggle_04/   what gets pushed: kernel-metadata.json + generated .ipynb
+  05_jev_multiseed.py
+  kaggle_01/ … kaggle_05/   what gets pushed: kernel-metadata.json + generated .ipynb
 src/
   make_notebook.py          converts a "# %%" .py file into a .ipynb
   anchor_entities.py        stage 1: word list that finds and marks the anchor entity
   kaggle_run.py             push → stream live logs → download outputs
-confounder_set/             draft confounder set, blind verification sheet, labelling guide
+confounder_set/             frozen confounder set (v2) and its guide
 outputs/kaggle_0*/          metrics, plots and logs pulled back from Kaggle
 data/                       local dataset copy (git-ignored)
 ```

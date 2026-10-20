@@ -56,7 +56,7 @@ if __name__ == "__main__":
     import pandas as pd
 
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    conf = pd.read_csv(os.path.join(root, "confounder_set", "confounder_set_v2_draft.csv"))
+    conf = pd.read_csv(os.path.join(root, "confounder_set", "confounder_set_v2.csv"))
     found = conf["text"].map(lambda t: find(t) is not None)
     print(f"confounder set: anchor found in {found.mean():.1%} of {len(conf)} sentences")
     for _, r in conf[~found].iterrows():
